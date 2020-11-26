@@ -24,15 +24,25 @@ namespace SBBTopSecretFormsApp
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            var result = _transport.GetStations(query: depatureStation.Text);
-            try {
-               string testing = result.StationList[0].Name;
-                form2.Show();
+            if (depatureStation.Text != "" && arrivalStation.Text != "") { 
+            var depatureTextResult = _transport.GetStations(query: depatureStation.Text);
+            var arrivalTextResult = _transport.GetStations(query: depatureStation.Text);
+
+                try
+                {
+               string depatureTextTesting = depatureTextResult.StationList[0].Name;
+                    string arrivalTextTesting = arrivalTextResult.StationList[0].Name;
+                    form2.Show();
                 form2.Focus();
             }
             catch(ArgumentOutOfRangeException) 
             { 
                 MessageBox.Show("Es wurde keine Station gefunden");
+            }
+            }
+            else
+            {
+                MessageBox.Show("Es müssen zwei Stationen eingegeben werden, um eine Verbindung herzustellen");
             }
         }
     }

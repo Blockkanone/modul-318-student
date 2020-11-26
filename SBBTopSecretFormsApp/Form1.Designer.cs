@@ -41,8 +41,8 @@ namespace SBBTopSecretFormsApp
             this.depatureTimeLabel = new System.Windows.Forms.Label();
             this.arrivalTimeLabel = new System.Windows.Forms.Label();
             this.searchTimeGroupBox = new System.Windows.Forms.GroupBox();
-            this.depatureTimeButton = new System.Windows.Forms.RadioButton();
             this.arrivalTimeSearchButton = new System.Windows.Forms.RadioButton();
+            this.depatureTimeButton = new System.Windows.Forms.RadioButton();
             this.searchTimeGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,16 +148,6 @@ namespace SBBTopSecretFormsApp
             this.searchTimeGroupBox.TabIndex = 11;
             this.searchTimeGroupBox.TabStop = false;
             // 
-            // depatureTimeButton
-            // 
-            this.depatureTimeButton.AutoSize = true;
-            this.depatureTimeButton.Location = new System.Drawing.Point(6, 16);
-            this.depatureTimeButton.Name = "depatureTimeButton";
-            this.depatureTimeButton.Size = new System.Drawing.Size(14, 13);
-            this.depatureTimeButton.TabIndex = 0;
-            this.depatureTimeButton.TabStop = true;
-            this.depatureTimeButton.UseVisualStyleBackColor = true;
-            // 
             // arrivalTimeSearchButton
             // 
             this.arrivalTimeSearchButton.AutoSize = true;
@@ -167,6 +157,16 @@ namespace SBBTopSecretFormsApp
             this.arrivalTimeSearchButton.TabIndex = 1;
             this.arrivalTimeSearchButton.TabStop = true;
             this.arrivalTimeSearchButton.UseVisualStyleBackColor = true;
+            // 
+            // depatureTimeButton
+            // 
+            this.depatureTimeButton.AutoSize = true;
+            this.depatureTimeButton.Location = new System.Drawing.Point(6, 16);
+            this.depatureTimeButton.Name = "depatureTimeButton";
+            this.depatureTimeButton.Size = new System.Drawing.Size(14, 13);
+            this.depatureTimeButton.TabIndex = 0;
+            this.depatureTimeButton.TabStop = true;
+            this.depatureTimeButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
