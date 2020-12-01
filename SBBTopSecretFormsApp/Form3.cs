@@ -41,6 +41,8 @@ namespace SBBTopSecretFormsApp
 
             depatureStationNrtbx1.Text = Convert.ToString(connectionResult1.ConnectionList[0].From.Platform);
 
+            depatureLinetbx1.Text = Convert.ToString(depatureStationPanel.Entries[0].Name);
+
 
 
             arrivalStationtbx2.Text = Convert.ToString(depatureStationPanel.Entries[1].To);
@@ -49,6 +51,9 @@ namespace SBBTopSecretFormsApp
             depatureTimetbx2.Text = depatureDateTime2.ToString("HH:mm", CultureInfo.InvariantCulture);
 
             depatureStationNrtbx2.Text = Convert.ToString(connectionResult2.ConnectionList[0].From.Platform);
+
+            depatureLinetbx2.Text = Convert.ToString(depatureStationPanel.Entries[1].Name);
+
 
 
 
@@ -59,6 +64,9 @@ namespace SBBTopSecretFormsApp
 
             depatureStationNrtbx3.Text = Convert.ToString(connectionResult3.ConnectionList[0].From.Platform);
 
+            depatureLinetbx3.Text = Convert.ToString(depatureStationPanel.Entries[2].Name);
+
+
 
 
             arrivalStationtbx4.Text = Convert.ToString(depatureStationPanel.Entries[3].To);
@@ -67,6 +75,9 @@ namespace SBBTopSecretFormsApp
             depatureTimetbx4.Text = depatureDateTime4.ToString("HH:mm", CultureInfo.InvariantCulture);
 
             depatureStationNrtbx4.Text = Convert.ToString(connectionResult4.ConnectionList[0].From.Platform);
+
+            depatureLinetbx4.Text = Convert.ToString(depatureStationPanel.Entries[3].Name);
+
         }
     }
 }

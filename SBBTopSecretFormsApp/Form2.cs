@@ -16,7 +16,7 @@ namespace SBBTopSecretFormsApp
     public partial class Form2 : Form
     {
         ITransport _transport = new Transport();
-        public Form2(Connections connectionResult)
+        public Form2(Connections connectionResult, StationBoardRoot depatureStationPanel)
         {
             InitializeComponent();
             var depatureDateTime1 = DateTime.Parse(connectionResult.ConnectionList[0].From.Departure);

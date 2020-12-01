@@ -84,7 +84,7 @@ namespace SBBTopSecretFormsApp
             // depatureStationNrLabel1
             // 
             this.depatureStationNrLabel1.AutoSize = true;
-            this.depatureStationNrLabel1.Location = new System.Drawing.Point(227, 135);
+            this.depatureStationNrLabel1.Location = new System.Drawing.Point(255, 135);
             this.depatureStationNrLabel1.Name = "depatureStationNrLabel1";
             this.depatureStationNrLabel1.Size = new System.Drawing.Size(30, 13);
             this.depatureStationNrLabel1.TabIndex = 33;
@@ -110,7 +110,7 @@ namespace SBBTopSecretFormsApp
             // 
             // depatureStationNrtbx1
             // 
-            this.depatureStationNrtbx1.Location = new System.Drawing.Point(230, 151);
+            this.depatureStationNrtbx1.Location = new System.Drawing.Point(258, 151);
             this.depatureStationNrtbx1.Name = "depatureStationNrtbx1";
             this.depatureStationNrtbx1.Size = new System.Drawing.Size(38, 20);
             this.depatureStationNrtbx1.TabIndex = 30;
@@ -119,7 +119,7 @@ namespace SBBTopSecretFormsApp
             // 
             this.depatureLinetbx1.Location = new System.Drawing.Point(186, 151);
             this.depatureLinetbx1.Name = "depatureLinetbx1";
-            this.depatureLinetbx1.Size = new System.Drawing.Size(38, 20);
+            this.depatureLinetbx1.Size = new System.Drawing.Size(66, 20);
             this.depatureLinetbx1.TabIndex = 29;
             // 
             // depatureTypetbx1
@@ -151,14 +151,14 @@ namespace SBBTopSecretFormsApp
             // 
             this.depatureTimetbx1.Location = new System.Drawing.Point(251, 102);
             this.depatureTimetbx1.Name = "depatureTimetbx1";
-            this.depatureTimetbx1.Size = new System.Drawing.Size(100, 20);
+            this.depatureTimetbx1.Size = new System.Drawing.Size(149, 20);
             this.depatureTimetbx1.TabIndex = 25;
             // 
             // depatureDatetbx1
             // 
             this.depatureDatetbx1.Location = new System.Drawing.Point(142, 102);
             this.depatureDatetbx1.Name = "depatureDatetbx1";
-            this.depatureDatetbx1.Size = new System.Drawing.Size(100, 20);
+            this.depatureDatetbx1.Size = new System.Drawing.Size(103, 20);
             this.depatureDatetbx1.TabIndex = 24;
             // 
             // depatureStation
@@ -179,15 +179,15 @@ namespace SBBTopSecretFormsApp
             // 
             // arrivalStationtbx1
             // 
-            this.arrivalStationtbx1.Location = new System.Drawing.Point(274, 151);
+            this.arrivalStationtbx1.Location = new System.Drawing.Point(302, 151);
             this.arrivalStationtbx1.Name = "arrivalStationtbx1";
-            this.arrivalStationtbx1.Size = new System.Drawing.Size(77, 20);
+            this.arrivalStationtbx1.Size = new System.Drawing.Size(98, 20);
             this.arrivalStationtbx1.TabIndex = 34;
             // 
             // arrivalStation1
             // 
             this.arrivalStation1.AutoSize = true;
-            this.arrivalStation1.Location = new System.Drawing.Point(271, 135);
+            this.arrivalStation1.Location = new System.Drawing.Point(299, 135);
             this.arrivalStation1.Name = "arrivalStation1";
             this.arrivalStation1.Size = new System.Drawing.Size(57, 13);
             this.arrivalStation1.TabIndex = 35;
@@ -196,7 +196,7 @@ namespace SBBTopSecretFormsApp
             // arrivalStation2
             // 
             this.arrivalStation2.AutoSize = true;
-            this.arrivalStation2.Location = new System.Drawing.Point(271, 258);
+            this.arrivalStation2.Location = new System.Drawing.Point(299, 258);
             this.arrivalStation2.Name = "arrivalStation2";
             this.arrivalStation2.Size = new System.Drawing.Size(57, 13);
             this.arrivalStation2.TabIndex = 47;
@@ -204,15 +204,15 @@ namespace SBBTopSecretFormsApp
             // 
             // arrivalStationtbx2
             // 
-            this.arrivalStationtbx2.Location = new System.Drawing.Point(274, 274);
+            this.arrivalStationtbx2.Location = new System.Drawing.Point(302, 274);
             this.arrivalStationtbx2.Name = "arrivalStationtbx2";
-            this.arrivalStationtbx2.Size = new System.Drawing.Size(77, 20);
+            this.arrivalStationtbx2.Size = new System.Drawing.Size(98, 20);
             this.arrivalStationtbx2.TabIndex = 46;
             // 
             // depatureStationNrLabel2
             // 
             this.depatureStationNrLabel2.AutoSize = true;
-            this.depatureStationNrLabel2.Location = new System.Drawing.Point(227, 258);
+            this.depatureStationNrLabel2.Location = new System.Drawing.Point(255, 258);
             this.depatureStationNrLabel2.Name = "depatureStationNrLabel2";
             this.depatureStationNrLabel2.Size = new System.Drawing.Size(30, 13);
             this.depatureStationNrLabel2.TabIndex = 45;
@@ -238,7 +238,7 @@ namespace SBBTopSecretFormsApp
             // 
             // depatureStationNrtbx2
             // 
-            this.depatureStationNrtbx2.Location = new System.Drawing.Point(230, 274);
+            this.depatureStationNrtbx2.Location = new System.Drawing.Point(258, 274);
             this.depatureStationNrtbx2.Name = "depatureStationNrtbx2";
             this.depatureStationNrtbx2.Size = new System.Drawing.Size(38, 20);
             this.depatureStationNrtbx2.TabIndex = 42;
@@ -247,7 +247,7 @@ namespace SBBTopSecretFormsApp
             // 
             this.depatureLinetbx2.Location = new System.Drawing.Point(186, 274);
             this.depatureLinetbx2.Name = "depatureLinetbx2";
-            this.depatureLinetbx2.Size = new System.Drawing.Size(38, 20);
+            this.depatureLinetbx2.Size = new System.Drawing.Size(66, 20);
             this.depatureLinetbx2.TabIndex = 41;
             // 
             // depatureTypetbx2
@@ -279,20 +279,20 @@ namespace SBBTopSecretFormsApp
             // 
             this.depatureTimetbx2.Location = new System.Drawing.Point(251, 225);
             this.depatureTimetbx2.Name = "depatureTimetbx2";
-            this.depatureTimetbx2.Size = new System.Drawing.Size(100, 20);
+            this.depatureTimetbx2.Size = new System.Drawing.Size(149, 20);
             this.depatureTimetbx2.TabIndex = 37;
             // 
             // depatureDatetbx2
             // 
             this.depatureDatetbx2.Location = new System.Drawing.Point(142, 225);
             this.depatureDatetbx2.Name = "depatureDatetbx2";
-            this.depatureDatetbx2.Size = new System.Drawing.Size(100, 20);
+            this.depatureDatetbx2.Size = new System.Drawing.Size(103, 20);
             this.depatureDatetbx2.TabIndex = 36;
             // 
             // arrivalStation3
             // 
             this.arrivalStation3.AutoSize = true;
-            this.arrivalStation3.Location = new System.Drawing.Point(271, 381);
+            this.arrivalStation3.Location = new System.Drawing.Point(299, 381);
             this.arrivalStation3.Name = "arrivalStation3";
             this.arrivalStation3.Size = new System.Drawing.Size(57, 13);
             this.arrivalStation3.TabIndex = 59;
@@ -300,15 +300,15 @@ namespace SBBTopSecretFormsApp
             // 
             // arrivalStationtbx3
             // 
-            this.arrivalStationtbx3.Location = new System.Drawing.Point(274, 397);
+            this.arrivalStationtbx3.Location = new System.Drawing.Point(302, 397);
             this.arrivalStationtbx3.Name = "arrivalStationtbx3";
-            this.arrivalStationtbx3.Size = new System.Drawing.Size(77, 20);
+            this.arrivalStationtbx3.Size = new System.Drawing.Size(98, 20);
             this.arrivalStationtbx3.TabIndex = 58;
             // 
             // depatureStationNrLabel3
             // 
             this.depatureStationNrLabel3.AutoSize = true;
-            this.depatureStationNrLabel3.Location = new System.Drawing.Point(227, 381);
+            this.depatureStationNrLabel3.Location = new System.Drawing.Point(255, 381);
             this.depatureStationNrLabel3.Name = "depatureStationNrLabel3";
             this.depatureStationNrLabel3.Size = new System.Drawing.Size(30, 13);
             this.depatureStationNrLabel3.TabIndex = 57;
@@ -334,7 +334,7 @@ namespace SBBTopSecretFormsApp
             // 
             // depatureStationNrtbx3
             // 
-            this.depatureStationNrtbx3.Location = new System.Drawing.Point(230, 397);
+            this.depatureStationNrtbx3.Location = new System.Drawing.Point(258, 397);
             this.depatureStationNrtbx3.Name = "depatureStationNrtbx3";
             this.depatureStationNrtbx3.Size = new System.Drawing.Size(38, 20);
             this.depatureStationNrtbx3.TabIndex = 54;
@@ -343,7 +343,7 @@ namespace SBBTopSecretFormsApp
             // 
             this.depatureLinetbx3.Location = new System.Drawing.Point(186, 397);
             this.depatureLinetbx3.Name = "depatureLinetbx3";
-            this.depatureLinetbx3.Size = new System.Drawing.Size(38, 20);
+            this.depatureLinetbx3.Size = new System.Drawing.Size(59, 20);
             this.depatureLinetbx3.TabIndex = 53;
             // 
             // depatureTypetbx3
@@ -375,20 +375,20 @@ namespace SBBTopSecretFormsApp
             // 
             this.depatureTimetbx3.Location = new System.Drawing.Point(251, 348);
             this.depatureTimetbx3.Name = "depatureTimetbx3";
-            this.depatureTimetbx3.Size = new System.Drawing.Size(100, 20);
+            this.depatureTimetbx3.Size = new System.Drawing.Size(149, 20);
             this.depatureTimetbx3.TabIndex = 49;
             // 
             // depatureDatetbx3
             // 
             this.depatureDatetbx3.Location = new System.Drawing.Point(142, 348);
             this.depatureDatetbx3.Name = "depatureDatetbx3";
-            this.depatureDatetbx3.Size = new System.Drawing.Size(100, 20);
+            this.depatureDatetbx3.Size = new System.Drawing.Size(103, 20);
             this.depatureDatetbx3.TabIndex = 48;
             // 
             // arrivalStation4
             // 
             this.arrivalStation4.AutoSize = true;
-            this.arrivalStation4.Location = new System.Drawing.Point(271, 503);
+            this.arrivalStation4.Location = new System.Drawing.Point(299, 503);
             this.arrivalStation4.Name = "arrivalStation4";
             this.arrivalStation4.Size = new System.Drawing.Size(57, 13);
             this.arrivalStation4.TabIndex = 71;
@@ -396,15 +396,15 @@ namespace SBBTopSecretFormsApp
             // 
             // arrivalStationtbx4
             // 
-            this.arrivalStationtbx4.Location = new System.Drawing.Point(274, 519);
+            this.arrivalStationtbx4.Location = new System.Drawing.Point(302, 519);
             this.arrivalStationtbx4.Name = "arrivalStationtbx4";
-            this.arrivalStationtbx4.Size = new System.Drawing.Size(77, 20);
+            this.arrivalStationtbx4.Size = new System.Drawing.Size(98, 20);
             this.arrivalStationtbx4.TabIndex = 70;
             // 
             // depatureStationNrLabel4
             // 
             this.depatureStationNrLabel4.AutoSize = true;
-            this.depatureStationNrLabel4.Location = new System.Drawing.Point(227, 503);
+            this.depatureStationNrLabel4.Location = new System.Drawing.Point(255, 503);
             this.depatureStationNrLabel4.Name = "depatureStationNrLabel4";
             this.depatureStationNrLabel4.Size = new System.Drawing.Size(30, 13);
             this.depatureStationNrLabel4.TabIndex = 69;
@@ -430,7 +430,7 @@ namespace SBBTopSecretFormsApp
             // 
             // depatureStationNrtbx4
             // 
-            this.depatureStationNrtbx4.Location = new System.Drawing.Point(230, 519);
+            this.depatureStationNrtbx4.Location = new System.Drawing.Point(258, 519);
             this.depatureStationNrtbx4.Name = "depatureStationNrtbx4";
             this.depatureStationNrtbx4.Size = new System.Drawing.Size(38, 20);
             this.depatureStationNrtbx4.TabIndex = 66;
@@ -439,7 +439,7 @@ namespace SBBTopSecretFormsApp
             // 
             this.depatureLinetbx4.Location = new System.Drawing.Point(186, 519);
             this.depatureLinetbx4.Name = "depatureLinetbx4";
-            this.depatureLinetbx4.Size = new System.Drawing.Size(38, 20);
+            this.depatureLinetbx4.Size = new System.Drawing.Size(59, 20);
             this.depatureLinetbx4.TabIndex = 65;
             // 
             // depatureTypetbx4
@@ -471,14 +471,14 @@ namespace SBBTopSecretFormsApp
             // 
             this.depatureTimetbx4.Location = new System.Drawing.Point(251, 470);
             this.depatureTimetbx4.Name = "depatureTimetbx4";
-            this.depatureTimetbx4.Size = new System.Drawing.Size(100, 20);
+            this.depatureTimetbx4.Size = new System.Drawing.Size(149, 20);
             this.depatureTimetbx4.TabIndex = 61;
             // 
             // depatureDatetbx4
             // 
             this.depatureDatetbx4.Location = new System.Drawing.Point(142, 470);
             this.depatureDatetbx4.Name = "depatureDatetbx4";
-            this.depatureDatetbx4.Size = new System.Drawing.Size(100, 20);
+            this.depatureDatetbx4.Size = new System.Drawing.Size(103, 20);
             this.depatureDatetbx4.TabIndex = 60;
             // 
             // Form3
