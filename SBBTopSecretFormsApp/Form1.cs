@@ -24,8 +24,8 @@ namespace SBBTopSecretFormsApp
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            var StationId = _transport.GetStations(query: depatureStation.Text);
-            var depatureStationPanel = _transport.GetStationBoard(station: depatureStation.Text, id: StationId.StationList[0].Id);
+           /* var StationId = _transport.GetStations(query: depatureStation.Text);
+            var depatureStationPanel = _transport.GetStationBoard(station: depatureStation.Text, id: StationId.StationList[0].Id);*/
 
             if (depatureStation.Text != "" && arrivalStation.Text != "") { 
             var depatureTextResult = _transport.GetStations(query: depatureStation.Text);
@@ -53,7 +53,7 @@ namespace SBBTopSecretFormsApp
 
                     string DateTimeSearchConnection = YearSearch + "-" + MonthSearch + "-" + DaySearch;
                     var connectionResult = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: arrivalStation.Text, date: DateTimeSearchConnection, time: timeSearch.Text);
-                    Form form2 = new Form2(connectionResult, depatureStationPanel);
+                    Form form2 = new Form2(connectionResult/*, depatureStationPanel*/);
                     form2.Show();
                 form2.Focus();
             }

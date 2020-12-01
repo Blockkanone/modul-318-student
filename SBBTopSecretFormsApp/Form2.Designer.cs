@@ -129,7 +129,7 @@ namespace SBBTopSecretFormsApp
             // 
             // arrivalStation1
             // 
-            this.arrivalStation1.Location = new System.Drawing.Point(363, 41);
+            this.arrivalStation1.Location = new System.Drawing.Point(460, 41);
             this.arrivalStation1.Name = "arrivalStation1";
             this.arrivalStation1.Size = new System.Drawing.Size(100, 20);
             this.arrivalStation1.TabIndex = 7;
@@ -144,7 +144,7 @@ namespace SBBTopSecretFormsApp
             // arrivalLabel1
             // 
             this.arrivalLabel1.AutoSize = true;
-            this.arrivalLabel1.Location = new System.Drawing.Point(360, 24);
+            this.arrivalLabel1.Location = new System.Drawing.Point(457, 24);
             this.arrivalLabel1.Name = "arrivalLabel1";
             this.arrivalLabel1.Size = new System.Drawing.Size(21, 13);
             this.arrivalLabel1.TabIndex = 5;
@@ -194,7 +194,7 @@ namespace SBBTopSecretFormsApp
             // arrivalTimeLabel1
             // 
             this.arrivalTimeLabel1.AutoSize = true;
-            this.arrivalTimeLabel1.Location = new System.Drawing.Point(465, 72);
+            this.arrivalTimeLabel1.Location = new System.Drawing.Point(562, 72);
             this.arrivalTimeLabel1.Name = "arrivalTimeLabel1";
             this.arrivalTimeLabel1.Size = new System.Drawing.Size(40, 13);
             this.arrivalTimeLabel1.TabIndex = 15;
@@ -203,7 +203,7 @@ namespace SBBTopSecretFormsApp
             // arrivalDateLabel1
             // 
             this.arrivalDateLabel1.AutoSize = true;
-            this.arrivalDateLabel1.Location = new System.Drawing.Point(359, 72);
+            this.arrivalDateLabel1.Location = new System.Drawing.Point(456, 72);
             this.arrivalDateLabel1.Name = "arrivalDateLabel1";
             this.arrivalDateLabel1.Size = new System.Drawing.Size(38, 13);
             this.arrivalDateLabel1.TabIndex = 14;
@@ -211,14 +211,14 @@ namespace SBBTopSecretFormsApp
             // 
             // arrivalTimetbx1
             // 
-            this.arrivalTimetbx1.Location = new System.Drawing.Point(468, 88);
+            this.arrivalTimetbx1.Location = new System.Drawing.Point(565, 88);
             this.arrivalTimetbx1.Name = "arrivalTimetbx1";
             this.arrivalTimetbx1.Size = new System.Drawing.Size(100, 20);
             this.arrivalTimetbx1.TabIndex = 13;
             // 
             // arrivalDatetbx1
             // 
-            this.arrivalDatetbx1.Location = new System.Drawing.Point(362, 88);
+            this.arrivalDatetbx1.Location = new System.Drawing.Point(459, 88);
             this.arrivalDatetbx1.Name = "arrivalDatetbx1";
             this.arrivalDatetbx1.Size = new System.Drawing.Size(100, 20);
             this.arrivalDatetbx1.TabIndex = 12;
@@ -234,12 +234,12 @@ namespace SBBTopSecretFormsApp
             // 
             this.depatureLinetbx1.Location = new System.Drawing.Point(158, 137);
             this.depatureLinetbx1.Name = "depatureLinetbx1";
-            this.depatureLinetbx1.Size = new System.Drawing.Size(38, 20);
+            this.depatureLinetbx1.Size = new System.Drawing.Size(82, 20);
             this.depatureLinetbx1.TabIndex = 17;
             // 
             // depatureStationNrtbx1
             // 
-            this.depatureStationNrtbx1.Location = new System.Drawing.Point(202, 137);
+            this.depatureStationNrtbx1.Location = new System.Drawing.Point(246, 137);
             this.depatureStationNrtbx1.Name = "depatureStationNrtbx1";
             this.depatureStationNrtbx1.Size = new System.Drawing.Size(38, 20);
             this.depatureStationNrtbx1.TabIndex = 18;
@@ -265,7 +265,7 @@ namespace SBBTopSecretFormsApp
             // depatureStationNrLabel1
             // 
             this.depatureStationNrLabel1.AutoSize = true;
-            this.depatureStationNrLabel1.Location = new System.Drawing.Point(199, 121);
+            this.depatureStationNrLabel1.Location = new System.Drawing.Point(243, 121);
             this.depatureStationNrLabel1.Name = "depatureStationNrLabel1";
             this.depatureStationNrLabel1.Size = new System.Drawing.Size(30, 13);
             this.depatureStationNrLabel1.TabIndex = 21;
@@ -274,7 +274,7 @@ namespace SBBTopSecretFormsApp
             // arrivalStationNrLabel1
             // 
             this.arrivalStationNrLabel1.AutoSize = true;
-            this.arrivalStationNrLabel1.Location = new System.Drawing.Point(448, 121);
+            this.arrivalStationNrLabel1.Location = new System.Drawing.Point(589, 121);
             this.arrivalStationNrLabel1.Name = "arrivalStationNrLabel1";
             this.arrivalStationNrLabel1.Size = new System.Drawing.Size(30, 13);
             this.arrivalStationNrLabel1.TabIndex = 27;
@@ -283,7 +283,7 @@ namespace SBBTopSecretFormsApp
             // arrivalLineLabel1
             // 
             this.arrivalLineLabel1.AutoSize = true;
-            this.arrivalLineLabel1.Location = new System.Drawing.Point(404, 121);
+            this.arrivalLineLabel1.Location = new System.Drawing.Point(501, 121);
             this.arrivalLineLabel1.Name = "arrivalLineLabel1";
             this.arrivalLineLabel1.Size = new System.Drawing.Size(29, 13);
             this.arrivalLineLabel1.TabIndex = 26;
@@ -292,7 +292,7 @@ namespace SBBTopSecretFormsApp
             // arrivalTypeLabel1
             // 
             this.arrivalTypeLabel1.AutoSize = true;
-            this.arrivalTypeLabel1.Location = new System.Drawing.Point(360, 121);
+            this.arrivalTypeLabel1.Location = new System.Drawing.Point(457, 121);
             this.arrivalTypeLabel1.Name = "arrivalTypeLabel1";
             this.arrivalTypeLabel1.Size = new System.Drawing.Size(25, 13);
             this.arrivalTypeLabel1.TabIndex = 25;
@@ -300,21 +300,21 @@ namespace SBBTopSecretFormsApp
             // 
             // arrivalStationNrtbx1
             // 
-            this.arrivalStationNrtbx1.Location = new System.Drawing.Point(451, 137);
+            this.arrivalStationNrtbx1.Location = new System.Drawing.Point(592, 137);
             this.arrivalStationNrtbx1.Name = "arrivalStationNrtbx1";
             this.arrivalStationNrtbx1.Size = new System.Drawing.Size(38, 20);
             this.arrivalStationNrtbx1.TabIndex = 24;
             // 
             // arrivalLinetbx1
             // 
-            this.arrivalLinetbx1.Location = new System.Drawing.Point(407, 137);
+            this.arrivalLinetbx1.Location = new System.Drawing.Point(504, 137);
             this.arrivalLinetbx1.Name = "arrivalLinetbx1";
-            this.arrivalLinetbx1.Size = new System.Drawing.Size(38, 20);
+            this.arrivalLinetbx1.Size = new System.Drawing.Size(82, 20);
             this.arrivalLinetbx1.TabIndex = 23;
             // 
             // arrivalTypetbx1
             // 
-            this.arrivalTypetbx1.Location = new System.Drawing.Point(363, 137);
+            this.arrivalTypetbx1.Location = new System.Drawing.Point(460, 137);
             this.arrivalTypetbx1.Name = "arrivalTypetbx1";
             this.arrivalTypetbx1.Size = new System.Drawing.Size(38, 20);
             this.arrivalTypetbx1.TabIndex = 22;
@@ -322,7 +322,7 @@ namespace SBBTopSecretFormsApp
             // arrivalStationNrLabel2
             // 
             this.arrivalStationNrLabel2.AutoSize = true;
-            this.arrivalStationNrLabel2.Location = new System.Drawing.Point(448, 288);
+            this.arrivalStationNrLabel2.Location = new System.Drawing.Point(589, 288);
             this.arrivalStationNrLabel2.Name = "arrivalStationNrLabel2";
             this.arrivalStationNrLabel2.Size = new System.Drawing.Size(30, 13);
             this.arrivalStationNrLabel2.TabIndex = 51;
@@ -331,7 +331,7 @@ namespace SBBTopSecretFormsApp
             // arrivalLineLabel2
             // 
             this.arrivalLineLabel2.AutoSize = true;
-            this.arrivalLineLabel2.Location = new System.Drawing.Point(404, 288);
+            this.arrivalLineLabel2.Location = new System.Drawing.Point(501, 288);
             this.arrivalLineLabel2.Name = "arrivalLineLabel2";
             this.arrivalLineLabel2.Size = new System.Drawing.Size(29, 13);
             this.arrivalLineLabel2.TabIndex = 50;
@@ -340,7 +340,7 @@ namespace SBBTopSecretFormsApp
             // arrivalTypeLabel2
             // 
             this.arrivalTypeLabel2.AutoSize = true;
-            this.arrivalTypeLabel2.Location = new System.Drawing.Point(360, 288);
+            this.arrivalTypeLabel2.Location = new System.Drawing.Point(457, 288);
             this.arrivalTypeLabel2.Name = "arrivalTypeLabel2";
             this.arrivalTypeLabel2.Size = new System.Drawing.Size(25, 13);
             this.arrivalTypeLabel2.TabIndex = 49;
@@ -348,21 +348,21 @@ namespace SBBTopSecretFormsApp
             // 
             // arrivalStationNrtbx2
             // 
-            this.arrivalStationNrtbx2.Location = new System.Drawing.Point(451, 304);
+            this.arrivalStationNrtbx2.Location = new System.Drawing.Point(592, 304);
             this.arrivalStationNrtbx2.Name = "arrivalStationNrtbx2";
             this.arrivalStationNrtbx2.Size = new System.Drawing.Size(38, 20);
             this.arrivalStationNrtbx2.TabIndex = 48;
             // 
             // arrivalLinetbx2
             // 
-            this.arrivalLinetbx2.Location = new System.Drawing.Point(407, 304);
+            this.arrivalLinetbx2.Location = new System.Drawing.Point(504, 304);
             this.arrivalLinetbx2.Name = "arrivalLinetbx2";
-            this.arrivalLinetbx2.Size = new System.Drawing.Size(38, 20);
+            this.arrivalLinetbx2.Size = new System.Drawing.Size(82, 20);
             this.arrivalLinetbx2.TabIndex = 47;
             // 
             // arrivalTypetbx2
             // 
-            this.arrivalTypetbx2.Location = new System.Drawing.Point(363, 304);
+            this.arrivalTypetbx2.Location = new System.Drawing.Point(460, 304);
             this.arrivalTypetbx2.Name = "arrivalTypetbx2";
             this.arrivalTypetbx2.Size = new System.Drawing.Size(38, 20);
             this.arrivalTypetbx2.TabIndex = 46;
@@ -370,7 +370,7 @@ namespace SBBTopSecretFormsApp
             // depatureStationNrLabel2
             // 
             this.depatureStationNrLabel2.AutoSize = true;
-            this.depatureStationNrLabel2.Location = new System.Drawing.Point(199, 288);
+            this.depatureStationNrLabel2.Location = new System.Drawing.Point(243, 288);
             this.depatureStationNrLabel2.Name = "depatureStationNrLabel2";
             this.depatureStationNrLabel2.Size = new System.Drawing.Size(30, 13);
             this.depatureStationNrLabel2.TabIndex = 45;
@@ -396,7 +396,7 @@ namespace SBBTopSecretFormsApp
             // 
             // depatureStationNrtbx2
             // 
-            this.depatureStationNrtbx2.Location = new System.Drawing.Point(202, 304);
+            this.depatureStationNrtbx2.Location = new System.Drawing.Point(246, 304);
             this.depatureStationNrtbx2.Name = "depatureStationNrtbx2";
             this.depatureStationNrtbx2.Size = new System.Drawing.Size(38, 20);
             this.depatureStationNrtbx2.TabIndex = 42;
@@ -405,7 +405,7 @@ namespace SBBTopSecretFormsApp
             // 
             this.depatureLinetbx2.Location = new System.Drawing.Point(158, 304);
             this.depatureLinetbx2.Name = "depatureLinetbx2";
-            this.depatureLinetbx2.Size = new System.Drawing.Size(38, 20);
+            this.depatureLinetbx2.Size = new System.Drawing.Size(82, 20);
             this.depatureLinetbx2.TabIndex = 41;
             // 
             // depatureTypetbx2
@@ -418,7 +418,7 @@ namespace SBBTopSecretFormsApp
             // arrivalTimeLabel2
             // 
             this.arrivalTimeLabel2.AutoSize = true;
-            this.arrivalTimeLabel2.Location = new System.Drawing.Point(465, 239);
+            this.arrivalTimeLabel2.Location = new System.Drawing.Point(562, 239);
             this.arrivalTimeLabel2.Name = "arrivalTimeLabel2";
             this.arrivalTimeLabel2.Size = new System.Drawing.Size(40, 13);
             this.arrivalTimeLabel2.TabIndex = 39;
@@ -427,7 +427,7 @@ namespace SBBTopSecretFormsApp
             // arrivalDateLabel2
             // 
             this.arrivalDateLabel2.AutoSize = true;
-            this.arrivalDateLabel2.Location = new System.Drawing.Point(359, 239);
+            this.arrivalDateLabel2.Location = new System.Drawing.Point(456, 239);
             this.arrivalDateLabel2.Name = "arrivalDateLabel2";
             this.arrivalDateLabel2.Size = new System.Drawing.Size(38, 13);
             this.arrivalDateLabel2.TabIndex = 38;
@@ -435,14 +435,14 @@ namespace SBBTopSecretFormsApp
             // 
             // arrivalTimetbx2
             // 
-            this.arrivalTimetbx2.Location = new System.Drawing.Point(468, 255);
+            this.arrivalTimetbx2.Location = new System.Drawing.Point(565, 255);
             this.arrivalTimetbx2.Name = "arrivalTimetbx2";
             this.arrivalTimetbx2.Size = new System.Drawing.Size(100, 20);
             this.arrivalTimetbx2.TabIndex = 37;
             // 
             // arrivalDatetbx2
             // 
-            this.arrivalDatetbx2.Location = new System.Drawing.Point(362, 255);
+            this.arrivalDatetbx2.Location = new System.Drawing.Point(459, 255);
             this.arrivalDatetbx2.Name = "arrivalDatetbx2";
             this.arrivalDatetbx2.Size = new System.Drawing.Size(100, 20);
             this.arrivalDatetbx2.TabIndex = 36;
@@ -481,7 +481,7 @@ namespace SBBTopSecretFormsApp
             // 
             // arrivalStation2
             // 
-            this.arrivalStation2.Location = new System.Drawing.Point(363, 208);
+            this.arrivalStation2.Location = new System.Drawing.Point(460, 208);
             this.arrivalStation2.Name = "arrivalStation2";
             this.arrivalStation2.Size = new System.Drawing.Size(100, 20);
             this.arrivalStation2.TabIndex = 31;
@@ -496,7 +496,7 @@ namespace SBBTopSecretFormsApp
             // arrivalLabel2
             // 
             this.arrivalLabel2.AutoSize = true;
-            this.arrivalLabel2.Location = new System.Drawing.Point(360, 191);
+            this.arrivalLabel2.Location = new System.Drawing.Point(457, 191);
             this.arrivalLabel2.Name = "arrivalLabel2";
             this.arrivalLabel2.Size = new System.Drawing.Size(21, 13);
             this.arrivalLabel2.TabIndex = 29;
@@ -514,7 +514,7 @@ namespace SBBTopSecretFormsApp
             // arrivalStationNrLabel3
             // 
             this.arrivalStationNrLabel3.AutoSize = true;
-            this.arrivalStationNrLabel3.Location = new System.Drawing.Point(448, 454);
+            this.arrivalStationNrLabel3.Location = new System.Drawing.Point(589, 454);
             this.arrivalStationNrLabel3.Name = "arrivalStationNrLabel3";
             this.arrivalStationNrLabel3.Size = new System.Drawing.Size(30, 13);
             this.arrivalStationNrLabel3.TabIndex = 75;
@@ -523,7 +523,7 @@ namespace SBBTopSecretFormsApp
             // arrivalLineLabel3
             // 
             this.arrivalLineLabel3.AutoSize = true;
-            this.arrivalLineLabel3.Location = new System.Drawing.Point(404, 454);
+            this.arrivalLineLabel3.Location = new System.Drawing.Point(501, 454);
             this.arrivalLineLabel3.Name = "arrivalLineLabel3";
             this.arrivalLineLabel3.Size = new System.Drawing.Size(29, 13);
             this.arrivalLineLabel3.TabIndex = 74;
@@ -532,7 +532,7 @@ namespace SBBTopSecretFormsApp
             // arrivalTypeLabel3
             // 
             this.arrivalTypeLabel3.AutoSize = true;
-            this.arrivalTypeLabel3.Location = new System.Drawing.Point(360, 454);
+            this.arrivalTypeLabel3.Location = new System.Drawing.Point(457, 454);
             this.arrivalTypeLabel3.Name = "arrivalTypeLabel3";
             this.arrivalTypeLabel3.Size = new System.Drawing.Size(25, 13);
             this.arrivalTypeLabel3.TabIndex = 73;
@@ -540,21 +540,21 @@ namespace SBBTopSecretFormsApp
             // 
             // arrivalStationNrtbx3
             // 
-            this.arrivalStationNrtbx3.Location = new System.Drawing.Point(451, 470);
+            this.arrivalStationNrtbx3.Location = new System.Drawing.Point(592, 470);
             this.arrivalStationNrtbx3.Name = "arrivalStationNrtbx3";
             this.arrivalStationNrtbx3.Size = new System.Drawing.Size(38, 20);
             this.arrivalStationNrtbx3.TabIndex = 72;
             // 
             // arrivalLinetbx3
             // 
-            this.arrivalLinetbx3.Location = new System.Drawing.Point(407, 470);
+            this.arrivalLinetbx3.Location = new System.Drawing.Point(504, 470);
             this.arrivalLinetbx3.Name = "arrivalLinetbx3";
-            this.arrivalLinetbx3.Size = new System.Drawing.Size(38, 20);
+            this.arrivalLinetbx3.Size = new System.Drawing.Size(82, 20);
             this.arrivalLinetbx3.TabIndex = 71;
             // 
             // arrivalTypetbx3
             // 
-            this.arrivalTypetbx3.Location = new System.Drawing.Point(363, 470);
+            this.arrivalTypetbx3.Location = new System.Drawing.Point(460, 470);
             this.arrivalTypetbx3.Name = "arrivalTypetbx3";
             this.arrivalTypetbx3.Size = new System.Drawing.Size(38, 20);
             this.arrivalTypetbx3.TabIndex = 70;
@@ -562,7 +562,7 @@ namespace SBBTopSecretFormsApp
             // depatureStationNrLabel3
             // 
             this.depatureStationNrLabel3.AutoSize = true;
-            this.depatureStationNrLabel3.Location = new System.Drawing.Point(199, 454);
+            this.depatureStationNrLabel3.Location = new System.Drawing.Point(243, 454);
             this.depatureStationNrLabel3.Name = "depatureStationNrLabel3";
             this.depatureStationNrLabel3.Size = new System.Drawing.Size(30, 13);
             this.depatureStationNrLabel3.TabIndex = 69;
@@ -588,7 +588,7 @@ namespace SBBTopSecretFormsApp
             // 
             // depatureStationNrtbx3
             // 
-            this.depatureStationNrtbx3.Location = new System.Drawing.Point(202, 470);
+            this.depatureStationNrtbx3.Location = new System.Drawing.Point(246, 470);
             this.depatureStationNrtbx3.Name = "depatureStationNrtbx3";
             this.depatureStationNrtbx3.Size = new System.Drawing.Size(38, 20);
             this.depatureStationNrtbx3.TabIndex = 66;
@@ -597,7 +597,7 @@ namespace SBBTopSecretFormsApp
             // 
             this.depatureLinetbx3.Location = new System.Drawing.Point(158, 470);
             this.depatureLinetbx3.Name = "depatureLinetbx3";
-            this.depatureLinetbx3.Size = new System.Drawing.Size(38, 20);
+            this.depatureLinetbx3.Size = new System.Drawing.Size(82, 20);
             this.depatureLinetbx3.TabIndex = 65;
             // 
             // depatureTypetbx3
@@ -610,7 +610,7 @@ namespace SBBTopSecretFormsApp
             // arrivalTimeLabel3
             // 
             this.arrivalTimeLabel3.AutoSize = true;
-            this.arrivalTimeLabel3.Location = new System.Drawing.Point(465, 405);
+            this.arrivalTimeLabel3.Location = new System.Drawing.Point(562, 405);
             this.arrivalTimeLabel3.Name = "arrivalTimeLabel3";
             this.arrivalTimeLabel3.Size = new System.Drawing.Size(40, 13);
             this.arrivalTimeLabel3.TabIndex = 63;
@@ -619,7 +619,7 @@ namespace SBBTopSecretFormsApp
             // arrivalDateLabel3
             // 
             this.arrivalDateLabel3.AutoSize = true;
-            this.arrivalDateLabel3.Location = new System.Drawing.Point(359, 405);
+            this.arrivalDateLabel3.Location = new System.Drawing.Point(456, 405);
             this.arrivalDateLabel3.Name = "arrivalDateLabel3";
             this.arrivalDateLabel3.Size = new System.Drawing.Size(38, 13);
             this.arrivalDateLabel3.TabIndex = 62;
@@ -627,14 +627,14 @@ namespace SBBTopSecretFormsApp
             // 
             // arrivalTimetbx3
             // 
-            this.arrivalTimetbx3.Location = new System.Drawing.Point(468, 421);
+            this.arrivalTimetbx3.Location = new System.Drawing.Point(565, 421);
             this.arrivalTimetbx3.Name = "arrivalTimetbx3";
             this.arrivalTimetbx3.Size = new System.Drawing.Size(100, 20);
             this.arrivalTimetbx3.TabIndex = 61;
             // 
             // arrivalDatetbx3
             // 
-            this.arrivalDatetbx3.Location = new System.Drawing.Point(362, 421);
+            this.arrivalDatetbx3.Location = new System.Drawing.Point(459, 421);
             this.arrivalDatetbx3.Name = "arrivalDatetbx3";
             this.arrivalDatetbx3.Size = new System.Drawing.Size(100, 20);
             this.arrivalDatetbx3.TabIndex = 60;
@@ -673,7 +673,7 @@ namespace SBBTopSecretFormsApp
             // 
             // arrivalStation3
             // 
-            this.arrivalStation3.Location = new System.Drawing.Point(363, 374);
+            this.arrivalStation3.Location = new System.Drawing.Point(460, 374);
             this.arrivalStation3.Name = "arrivalStation3";
             this.arrivalStation3.Size = new System.Drawing.Size(100, 20);
             this.arrivalStation3.TabIndex = 55;
@@ -688,7 +688,7 @@ namespace SBBTopSecretFormsApp
             // arrivalLabel3
             // 
             this.arrivalLabel3.AutoSize = true;
-            this.arrivalLabel3.Location = new System.Drawing.Point(360, 357);
+            this.arrivalLabel3.Location = new System.Drawing.Point(457, 357);
             this.arrivalLabel3.Name = "arrivalLabel3";
             this.arrivalLabel3.Size = new System.Drawing.Size(21, 13);
             this.arrivalLabel3.TabIndex = 53;
@@ -706,7 +706,7 @@ namespace SBBTopSecretFormsApp
             // arrivalStationNrLabel4
             // 
             this.arrivalStationNrLabel4.AutoSize = true;
-            this.arrivalStationNrLabel4.Location = new System.Drawing.Point(448, 617);
+            this.arrivalStationNrLabel4.Location = new System.Drawing.Point(589, 617);
             this.arrivalStationNrLabel4.Name = "arrivalStationNrLabel4";
             this.arrivalStationNrLabel4.Size = new System.Drawing.Size(30, 13);
             this.arrivalStationNrLabel4.TabIndex = 99;
@@ -715,7 +715,7 @@ namespace SBBTopSecretFormsApp
             // arrivalLineLabel4
             // 
             this.arrivalLineLabel4.AutoSize = true;
-            this.arrivalLineLabel4.Location = new System.Drawing.Point(404, 617);
+            this.arrivalLineLabel4.Location = new System.Drawing.Point(501, 617);
             this.arrivalLineLabel4.Name = "arrivalLineLabel4";
             this.arrivalLineLabel4.Size = new System.Drawing.Size(29, 13);
             this.arrivalLineLabel4.TabIndex = 98;
@@ -724,7 +724,7 @@ namespace SBBTopSecretFormsApp
             // arrivalTypeLabel4
             // 
             this.arrivalTypeLabel4.AutoSize = true;
-            this.arrivalTypeLabel4.Location = new System.Drawing.Point(360, 617);
+            this.arrivalTypeLabel4.Location = new System.Drawing.Point(457, 617);
             this.arrivalTypeLabel4.Name = "arrivalTypeLabel4";
             this.arrivalTypeLabel4.Size = new System.Drawing.Size(25, 13);
             this.arrivalTypeLabel4.TabIndex = 97;
@@ -732,21 +732,21 @@ namespace SBBTopSecretFormsApp
             // 
             // arrivalStationNrtbx4
             // 
-            this.arrivalStationNrtbx4.Location = new System.Drawing.Point(451, 633);
+            this.arrivalStationNrtbx4.Location = new System.Drawing.Point(592, 633);
             this.arrivalStationNrtbx4.Name = "arrivalStationNrtbx4";
             this.arrivalStationNrtbx4.Size = new System.Drawing.Size(38, 20);
             this.arrivalStationNrtbx4.TabIndex = 96;
             // 
             // arrivalLinetbx4
             // 
-            this.arrivalLinetbx4.Location = new System.Drawing.Point(407, 633);
+            this.arrivalLinetbx4.Location = new System.Drawing.Point(504, 633);
             this.arrivalLinetbx4.Name = "arrivalLinetbx4";
-            this.arrivalLinetbx4.Size = new System.Drawing.Size(38, 20);
+            this.arrivalLinetbx4.Size = new System.Drawing.Size(82, 20);
             this.arrivalLinetbx4.TabIndex = 95;
             // 
             // arrivalTypetbx4
             // 
-            this.arrivalTypetbx4.Location = new System.Drawing.Point(363, 633);
+            this.arrivalTypetbx4.Location = new System.Drawing.Point(460, 633);
             this.arrivalTypetbx4.Name = "arrivalTypetbx4";
             this.arrivalTypetbx4.Size = new System.Drawing.Size(38, 20);
             this.arrivalTypetbx4.TabIndex = 94;
@@ -754,7 +754,7 @@ namespace SBBTopSecretFormsApp
             // depatureStationNrLabel4
             // 
             this.depatureStationNrLabel4.AutoSize = true;
-            this.depatureStationNrLabel4.Location = new System.Drawing.Point(199, 617);
+            this.depatureStationNrLabel4.Location = new System.Drawing.Point(219, 617);
             this.depatureStationNrLabel4.Name = "depatureStationNrLabel4";
             this.depatureStationNrLabel4.Size = new System.Drawing.Size(30, 13);
             this.depatureStationNrLabel4.TabIndex = 93;
@@ -780,7 +780,7 @@ namespace SBBTopSecretFormsApp
             // 
             // depatureStationNrtbx4
             // 
-            this.depatureStationNrtbx4.Location = new System.Drawing.Point(202, 633);
+            this.depatureStationNrtbx4.Location = new System.Drawing.Point(222, 633);
             this.depatureStationNrtbx4.Name = "depatureStationNrtbx4";
             this.depatureStationNrtbx4.Size = new System.Drawing.Size(38, 20);
             this.depatureStationNrtbx4.TabIndex = 90;
@@ -789,7 +789,7 @@ namespace SBBTopSecretFormsApp
             // 
             this.depatureLinetbx4.Location = new System.Drawing.Point(158, 633);
             this.depatureLinetbx4.Name = "depatureLinetbx4";
-            this.depatureLinetbx4.Size = new System.Drawing.Size(38, 20);
+            this.depatureLinetbx4.Size = new System.Drawing.Size(56, 20);
             this.depatureLinetbx4.TabIndex = 89;
             // 
             // depatureTypetbx4
@@ -802,7 +802,7 @@ namespace SBBTopSecretFormsApp
             // arrivalTimeLabel4
             // 
             this.arrivalTimeLabel4.AutoSize = true;
-            this.arrivalTimeLabel4.Location = new System.Drawing.Point(465, 568);
+            this.arrivalTimeLabel4.Location = new System.Drawing.Point(562, 568);
             this.arrivalTimeLabel4.Name = "arrivalTimeLabel4";
             this.arrivalTimeLabel4.Size = new System.Drawing.Size(40, 13);
             this.arrivalTimeLabel4.TabIndex = 87;
@@ -811,7 +811,7 @@ namespace SBBTopSecretFormsApp
             // arrivalDateLabel4
             // 
             this.arrivalDateLabel4.AutoSize = true;
-            this.arrivalDateLabel4.Location = new System.Drawing.Point(359, 568);
+            this.arrivalDateLabel4.Location = new System.Drawing.Point(456, 568);
             this.arrivalDateLabel4.Name = "arrivalDateLabel4";
             this.arrivalDateLabel4.Size = new System.Drawing.Size(38, 13);
             this.arrivalDateLabel4.TabIndex = 86;
@@ -819,14 +819,14 @@ namespace SBBTopSecretFormsApp
             // 
             // arrivalTimetbx4
             // 
-            this.arrivalTimetbx4.Location = new System.Drawing.Point(468, 584);
+            this.arrivalTimetbx4.Location = new System.Drawing.Point(565, 584);
             this.arrivalTimetbx4.Name = "arrivalTimetbx4";
             this.arrivalTimetbx4.Size = new System.Drawing.Size(100, 20);
             this.arrivalTimetbx4.TabIndex = 85;
             // 
             // arrivalDatetbx4
             // 
-            this.arrivalDatetbx4.Location = new System.Drawing.Point(362, 584);
+            this.arrivalDatetbx4.Location = new System.Drawing.Point(459, 584);
             this.arrivalDatetbx4.Name = "arrivalDatetbx4";
             this.arrivalDatetbx4.Size = new System.Drawing.Size(100, 20);
             this.arrivalDatetbx4.TabIndex = 84;
@@ -865,7 +865,7 @@ namespace SBBTopSecretFormsApp
             // 
             // arrivalStation4
             // 
-            this.arrivalStation4.Location = new System.Drawing.Point(363, 537);
+            this.arrivalStation4.Location = new System.Drawing.Point(460, 537);
             this.arrivalStation4.Name = "arrivalStation4";
             this.arrivalStation4.Size = new System.Drawing.Size(100, 20);
             this.arrivalStation4.TabIndex = 79;
@@ -880,7 +880,7 @@ namespace SBBTopSecretFormsApp
             // arrivalLabel4
             // 
             this.arrivalLabel4.AutoSize = true;
-            this.arrivalLabel4.Location = new System.Drawing.Point(360, 520);
+            this.arrivalLabel4.Location = new System.Drawing.Point(457, 520);
             this.arrivalLabel4.Name = "arrivalLabel4";
             this.arrivalLabel4.Size = new System.Drawing.Size(21, 13);
             this.arrivalLabel4.TabIndex = 77;

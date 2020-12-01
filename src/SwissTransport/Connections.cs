@@ -19,6 +19,9 @@ namespace SwissTransport
 
         [JsonProperty("duration")]
         public string Duration { get; set; }
+
+        /* [JsonProperty("section")]
+        public string Section { get; set; }*/ 
     }
 
     public class ConnectionPoint

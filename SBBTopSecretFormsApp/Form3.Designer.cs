@@ -79,6 +79,7 @@ namespace SBBTopSecretFormsApp
             this.depatureDateLabel4 = new System.Windows.Forms.Label();
             this.depatureTimetbx4 = new System.Windows.Forms.TextBox();
             this.depatureDatetbx4 = new System.Windows.Forms.TextBox();
+            this.reload = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // depatureStationNrLabel1
@@ -151,7 +152,7 @@ namespace SBBTopSecretFormsApp
             // 
             this.depatureTimetbx1.Location = new System.Drawing.Point(251, 102);
             this.depatureTimetbx1.Name = "depatureTimetbx1";
-            this.depatureTimetbx1.Size = new System.Drawing.Size(149, 20);
+            this.depatureTimetbx1.Size = new System.Drawing.Size(174, 20);
             this.depatureTimetbx1.TabIndex = 25;
             // 
             // depatureDatetbx1
@@ -181,7 +182,7 @@ namespace SBBTopSecretFormsApp
             // 
             this.arrivalStationtbx1.Location = new System.Drawing.Point(302, 151);
             this.arrivalStationtbx1.Name = "arrivalStationtbx1";
-            this.arrivalStationtbx1.Size = new System.Drawing.Size(98, 20);
+            this.arrivalStationtbx1.Size = new System.Drawing.Size(123, 20);
             this.arrivalStationtbx1.TabIndex = 34;
             // 
             // arrivalStation1
@@ -206,7 +207,7 @@ namespace SBBTopSecretFormsApp
             // 
             this.arrivalStationtbx2.Location = new System.Drawing.Point(302, 274);
             this.arrivalStationtbx2.Name = "arrivalStationtbx2";
-            this.arrivalStationtbx2.Size = new System.Drawing.Size(98, 20);
+            this.arrivalStationtbx2.Size = new System.Drawing.Size(123, 20);
             this.arrivalStationtbx2.TabIndex = 46;
             // 
             // depatureStationNrLabel2
@@ -279,7 +280,7 @@ namespace SBBTopSecretFormsApp
             // 
             this.depatureTimetbx2.Location = new System.Drawing.Point(251, 225);
             this.depatureTimetbx2.Name = "depatureTimetbx2";
-            this.depatureTimetbx2.Size = new System.Drawing.Size(149, 20);
+            this.depatureTimetbx2.Size = new System.Drawing.Size(174, 20);
             this.depatureTimetbx2.TabIndex = 37;
             // 
             // depatureDatetbx2
@@ -302,7 +303,7 @@ namespace SBBTopSecretFormsApp
             // 
             this.arrivalStationtbx3.Location = new System.Drawing.Point(302, 397);
             this.arrivalStationtbx3.Name = "arrivalStationtbx3";
-            this.arrivalStationtbx3.Size = new System.Drawing.Size(98, 20);
+            this.arrivalStationtbx3.Size = new System.Drawing.Size(123, 20);
             this.arrivalStationtbx3.TabIndex = 58;
             // 
             // depatureStationNrLabel3
@@ -375,7 +376,7 @@ namespace SBBTopSecretFormsApp
             // 
             this.depatureTimetbx3.Location = new System.Drawing.Point(251, 348);
             this.depatureTimetbx3.Name = "depatureTimetbx3";
-            this.depatureTimetbx3.Size = new System.Drawing.Size(149, 20);
+            this.depatureTimetbx3.Size = new System.Drawing.Size(174, 20);
             this.depatureTimetbx3.TabIndex = 49;
             // 
             // depatureDatetbx3
@@ -398,7 +399,7 @@ namespace SBBTopSecretFormsApp
             // 
             this.arrivalStationtbx4.Location = new System.Drawing.Point(302, 519);
             this.arrivalStationtbx4.Name = "arrivalStationtbx4";
-            this.arrivalStationtbx4.Size = new System.Drawing.Size(98, 20);
+            this.arrivalStationtbx4.Size = new System.Drawing.Size(123, 20);
             this.arrivalStationtbx4.TabIndex = 70;
             // 
             // depatureStationNrLabel4
@@ -471,7 +472,7 @@ namespace SBBTopSecretFormsApp
             // 
             this.depatureTimetbx4.Location = new System.Drawing.Point(251, 470);
             this.depatureTimetbx4.Name = "depatureTimetbx4";
-            this.depatureTimetbx4.Size = new System.Drawing.Size(149, 20);
+            this.depatureTimetbx4.Size = new System.Drawing.Size(174, 20);
             this.depatureTimetbx4.TabIndex = 61;
             // 
             // depatureDatetbx4
@@ -481,11 +482,22 @@ namespace SBBTopSecretFormsApp
             this.depatureDatetbx4.Size = new System.Drawing.Size(103, 20);
             this.depatureDatetbx4.TabIndex = 60;
             // 
+            // reload
+            // 
+            this.reload.Location = new System.Drawing.Point(44, 38);
+            this.reload.Name = "reload";
+            this.reload.Size = new System.Drawing.Size(75, 20);
+            this.reload.TabIndex = 72;
+            this.reload.Text = "Neu laden";
+            this.reload.UseVisualStyleBackColor = true;
+            this.reload.Click += new System.EventHandler(this.reload_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(881, 579);
+            this.Controls.Add(this.reload);
             this.Controls.Add(this.arrivalStation4);
             this.Controls.Add(this.arrivalStationtbx4);
             this.Controls.Add(this.depatureStationNrLabel4);
@@ -595,5 +607,6 @@ namespace SBBTopSecretFormsApp
         private System.Windows.Forms.Label depatureDateLabel4;
         private System.Windows.Forms.TextBox depatureTimetbx4;
         private System.Windows.Forms.TextBox depatureDatetbx4;
+        private System.Windows.Forms.Button reload;
     }
 }

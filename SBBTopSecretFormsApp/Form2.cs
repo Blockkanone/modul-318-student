@@ -16,7 +16,7 @@ namespace SBBTopSecretFormsApp
     public partial class Form2 : Form
     {
         ITransport _transport = new Transport();
-        public Form2(Connections connectionResult, StationBoardRoot depatureStationPanel)
+        public Form2(Connections connectionResult/*, StationBoardRoot depatureStationPanel*/)
         {
             InitializeComponent();
             var depatureDateTime1 = DateTime.Parse(connectionResult.ConnectionList[0].From.Departure);
@@ -42,6 +42,19 @@ namespace SBBTopSecretFormsApp
 
             depatureStationNrtbx1.Text = Convert.ToString(connectionResult.ConnectionList[0].From.Platform);
             arrivalStationNrtbx1.Text = Convert.ToString(connectionResult.ConnectionList[0].To.Platform);
+
+            // connectionResult.ConnectionList[0].To
+           /* var condition = 0;
+            var counter = 0;
+            string coundit = Convert.ToString(depatureStationPanel.Entries[counter].Number); */
+             /*while (condition == 0)
+
+                 if (coundit == "")
+                 {
+
+                 }
+                 counter++;
+             }*/ 
 
 
 
