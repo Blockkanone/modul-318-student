@@ -16,7 +16,7 @@ namespace SBBTopSecretFormsApp
     public partial class Form2 : Form
     {
         ITransport _transport = new Transport();
-        public Form2(Connections connectionResult/*, StationBoardRoot depatureStationPanel*/)
+        public Form2(Connections connectionResult, StationBoardRoot depatureStationPanel)
         {
             InitializeComponent();
             var depatureDateTime1 = DateTime.Parse(connectionResult.ConnectionList[0].From.Departure);
@@ -43,18 +43,63 @@ namespace SBBTopSecretFormsApp
             depatureStationNrtbx1.Text = Convert.ToString(connectionResult.ConnectionList[0].From.Platform);
             arrivalStationNrtbx1.Text = Convert.ToString(connectionResult.ConnectionList[0].To.Platform);
 
+
+            var condition = depatureStationPanel.Entries[0].Category;
+            if (condition == "B") { 
+
+            depatureTypetbx1.Text = "Bus";
+            arrivalTypetbx1.Text = "Bus";
+            }
+            else
+            {
+                depatureTypetbx1.Text = "Zug";
+                arrivalTypetbx1.Text = "Zug";
+            }
+            if (condition == "B")
+            {
+
+                depatureTypetbx2.Text = "Bus";
+                arrivalTypetbx2.Text = "Bus";
+            }
+            else
+            {
+                depatureTypetbx2.Text = "Zug";
+                arrivalTypetbx2.Text = "Zug";
+            }
+            if (condition == "B")
+            {
+
+                depatureTypetbx3.Text = "Bus";
+                arrivalTypetbx3.Text = "Bus";
+            }
+            else
+            {
+                depatureTypetbx3.Text = "Zug";
+                arrivalTypetbx3.Text = "Zug";
+            }
+            if (condition == "B")
+            {
+
+                depatureTypetbx4.Text = "Bus";
+                arrivalTypetbx4.Text = "Bus";
+            }
+            else
+            {
+                depatureTypetbx4.Text = "Zug";
+                arrivalTypetbx4.Text = "Zug";
+            }
             // connectionResult.ConnectionList[0].To
-           /* var condition = 0;
-            var counter = 0;
-            string coundit = Convert.ToString(depatureStationPanel.Entries[counter].Number); */
-             /*while (condition == 0)
+            /* var condition = 0;
+             var counter = 0;
+             string coundit = Convert.ToString(depatureStationPanel.Entries[counter].Number); */
+            /*while (condition == 0)
 
-                 if (coundit == "")
-                 {
+                if (coundit == "")
+                {
 
-                 }
-                 counter++;
-             }*/ 
+                }
+                counter++;
+            }*/
 
 
 

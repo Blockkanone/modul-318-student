@@ -131,14 +131,14 @@ namespace SBBTopSecretFormsApp
             // 
             this.arrivalStation1.Location = new System.Drawing.Point(460, 41);
             this.arrivalStation1.Name = "arrivalStation1";
-            this.arrivalStation1.Size = new System.Drawing.Size(100, 20);
+            this.arrivalStation1.Size = new System.Drawing.Size(170, 20);
             this.arrivalStation1.TabIndex = 7;
             // 
             // depatureStation1
             // 
             this.depatureStation1.Location = new System.Drawing.Point(114, 41);
             this.depatureStation1.Name = "depatureStation1";
-            this.depatureStation1.Size = new System.Drawing.Size(100, 20);
+            this.depatureStation1.Size = new System.Drawing.Size(170, 20);
             this.depatureStation1.TabIndex = 6;
             // 
             // arrivalLabel1
@@ -483,14 +483,14 @@ namespace SBBTopSecretFormsApp
             // 
             this.arrivalStation2.Location = new System.Drawing.Point(460, 208);
             this.arrivalStation2.Name = "arrivalStation2";
-            this.arrivalStation2.Size = new System.Drawing.Size(100, 20);
+            this.arrivalStation2.Size = new System.Drawing.Size(170, 20);
             this.arrivalStation2.TabIndex = 31;
             // 
             // depatureStation2
             // 
             this.depatureStation2.Location = new System.Drawing.Point(114, 208);
             this.depatureStation2.Name = "depatureStation2";
-            this.depatureStation2.Size = new System.Drawing.Size(100, 20);
+            this.depatureStation2.Size = new System.Drawing.Size(170, 20);
             this.depatureStation2.TabIndex = 30;
             // 
             // arrivalLabel2
@@ -675,14 +675,14 @@ namespace SBBTopSecretFormsApp
             // 
             this.arrivalStation3.Location = new System.Drawing.Point(460, 374);
             this.arrivalStation3.Name = "arrivalStation3";
-            this.arrivalStation3.Size = new System.Drawing.Size(100, 20);
+            this.arrivalStation3.Size = new System.Drawing.Size(170, 20);
             this.arrivalStation3.TabIndex = 55;
             // 
             // depatureStation3
             // 
             this.depatureStation3.Location = new System.Drawing.Point(114, 374);
             this.depatureStation3.Name = "depatureStation3";
-            this.depatureStation3.Size = new System.Drawing.Size(100, 20);
+            this.depatureStation3.Size = new System.Drawing.Size(170, 20);
             this.depatureStation3.TabIndex = 54;
             // 
             // arrivalLabel3
@@ -867,14 +867,14 @@ namespace SBBTopSecretFormsApp
             // 
             this.arrivalStation4.Location = new System.Drawing.Point(460, 537);
             this.arrivalStation4.Name = "arrivalStation4";
-            this.arrivalStation4.Size = new System.Drawing.Size(100, 20);
+            this.arrivalStation4.Size = new System.Drawing.Size(170, 20);
             this.arrivalStation4.TabIndex = 79;
             // 
             // depatureStation4
             // 
             this.depatureStation4.Location = new System.Drawing.Point(114, 537);
             this.depatureStation4.Name = "depatureStation4";
-            this.depatureStation4.Size = new System.Drawing.Size(100, 20);
+            this.depatureStation4.Size = new System.Drawing.Size(146, 20);
             this.depatureStation4.TabIndex = 78;
             // 
             // arrivalLabel4

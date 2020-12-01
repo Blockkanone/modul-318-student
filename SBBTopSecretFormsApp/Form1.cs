@@ -13,7 +13,10 @@ namespace SBBTopSecretFormsApp
 {
     public partial class Form1 : Form
     {
+
         ITransport _transport = new Transport();
+
+
         public Form1()
         {
             InitializeComponent();
@@ -21,11 +24,12 @@ namespace SBBTopSecretFormsApp
             timeSearch.Text = DateTime.Now.ToShortTimeString();
         }
 
+       // string[] depatureHistory;
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-           /* var StationId = _transport.GetStations(query: depatureStation.Text);
-            var depatureStationPanel = _transport.GetStationBoard(station: depatureStation.Text, id: StationId.StationList[0].Id);*/
+           var StationId = _transport.GetStations(query: depatureStation.Text);
+            var depatureStationPanel = _transport.GetStationBoard(station: depatureStation.Text, id: StationId.StationList[0].Id);
 
             if (depatureStation.Text != "" && arrivalStation.Text != "") { 
             var depatureTextResult = _transport.GetStations(query: depatureStation.Text);
@@ -53,7 +57,17 @@ namespace SBBTopSecretFormsApp
 
                     string DateTimeSearchConnection = YearSearch + "-" + MonthSearch + "-" + DaySearch;
                     var connectionResult = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: arrivalStation.Text, date: DateTimeSearchConnection, time: timeSearch.Text);
-                    Form form2 = new Form2(connectionResult/*, depatureStationPanel*/);
+                    
+                    
+                  /*  string[] depatureHistory = { depatureStation.Text };
+
+                    int condition = 0;
+                    while (condition < 5)
+                    {
+                        depatureStation.Items.Add(depatureHistory[condition]);
+                            }*/
+
+                    Form form2 = new Form2(connectionResult, depatureStationPanel);
                     form2.Show();
                 form2.Focus();
             }
@@ -66,7 +80,9 @@ namespace SBBTopSecretFormsApp
             {
                 MessageBox.Show("Es müssen zwei Stationen eingegeben werden, um eine Verbindung herzustellen");
             }
+            
         }
+        
 
         private void departurePanelButton_Click(object sender, EventArgs e)
         {
@@ -110,6 +126,45 @@ namespace SBBTopSecretFormsApp
                 MessageBox.Show("Um auf die Abfahrtstafel zuzugreifen, muss bei 'Von' eine Station eingegeben werden");
                     }
 
+        }
+
+       private void depatureStation_TextUpdate(object sender, EventArgs e)
+        {
+           
+           /* if(depatureStation.Items.Count != 0)
+            {
+                depatureStation.Items.Clear();
+            }
+            var Station = _transport.GetStations(query: depatureStation.Text);
+            int condition = 0;
+            while (condition < 5)
+            {
+                try { 
+                    depatureStation.Items.Add(Station.StationList[condition].Name); 
+                } catch (ArgumentOutOfRangeException) { }
+                condition++;
+
+            }*/
+        }
+
+        private void arrivalStation_TextUpdate(object sender, EventArgs e)
+        {
+          /*  if (arrivalStation.Items.Count != 0)
+            {
+                arrivalStation.Items.Clear();
+            }
+
+            var Station = _transport.GetStations(query: arrivalStation.Text);
+            int condition = 0;
+            while (condition < 5)
+            {
+                arrivalStation.Items.Clear();
+                try
+                {
+                    arrivalStation.Items.Add(Station.StationList[condition].Name);
+            } catch (ArgumentOutOfRangeException) { }
+            condition++;
+            } */
         }
     }
 }

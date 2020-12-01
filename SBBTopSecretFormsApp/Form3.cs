@@ -103,6 +103,42 @@ namespace SBBTopSecretFormsApp
             {
                 depatureLinetbx4.Text = Convert.ToString(depatureStationPanel.Entries[3].Name);
             }
+            var condition = depatureStationPanel.Entries[0].Category;
+            if (condition == "B")
+            {
+                depatureTypetbx1.Text = "Bus";
+            }
+            else
+            {
+                depatureTypetbx1.Text = "Zug";
+            }
+            if (condition == "B")
+            {
+
+                depatureTypetbx2.Text = "Bus";
+            }
+            else
+            {
+                depatureTypetbx2.Text = "Zug";
+            }
+            if (condition == "B")
+            {
+
+                depatureTypetbx3.Text = "Bus";
+            }
+            else
+            {
+                depatureTypetbx3.Text = "Zug";
+            }
+            if (condition == "B")
+            {
+
+                depatureTypetbx4.Text = "Bus";
+            }
+            else
+            {
+                depatureTypetbx4.Text = "Zug";
+            }
         }
 
         private void reload_Click(object sender, EventArgs e)
@@ -221,6 +257,44 @@ namespace SBBTopSecretFormsApp
                 else
                 {
                     depatureLinetbx4.Text = Convert.ToString(depatureStationPanel.Entries[3].Name);
+                }
+
+
+                var condition = depatureStationPanel.Entries[0].Category;
+                if (condition == "B")
+                {
+                    depatureTypetbx1.Text = "Bus";
+                }
+                else
+                {
+                    depatureTypetbx1.Text = "Zug";
+                }
+                if (condition == "B")
+                {
+
+                    depatureTypetbx2.Text = "Bus";
+                }
+                else
+                {
+                    depatureTypetbx2.Text = "Zug";
+                }
+                if (condition == "B")
+                {
+
+                    depatureTypetbx3.Text = "Bus";
+                }
+                else
+                {
+                    depatureTypetbx3.Text = "Zug";
+                }
+                if (condition == "B")
+                {
+
+                    depatureTypetbx4.Text = "Bus";
+                }
+                else
+                {
+                    depatureTypetbx4.Text = "Zug";
                 }
             }
         }

@@ -31,8 +31,6 @@ namespace SBBTopSecretFormsApp
         {
             this.depatureLabel = new System.Windows.Forms.Label();
             this.arrivalLabel = new System.Windows.Forms.Label();
-            this.depatureStation = new System.Windows.Forms.TextBox();
-            this.arrivalStation = new System.Windows.Forms.TextBox();
             this.dateSearch = new System.Windows.Forms.TextBox();
             this.timeSearch = new System.Windows.Forms.TextBox();
             this.dateLabel = new System.Windows.Forms.Label();
@@ -44,6 +42,8 @@ namespace SBBTopSecretFormsApp
             this.arrivalTimeSearchButton = new System.Windows.Forms.RadioButton();
             this.depatureTimeButton = new System.Windows.Forms.RadioButton();
             this.departurePanelButton = new System.Windows.Forms.Button();
+            this.depatureStation = new System.Windows.Forms.ComboBox();
+            this.arrivalStation = new System.Windows.Forms.ComboBox();
             this.searchTimeGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,20 +64,6 @@ namespace SBBTopSecretFormsApp
             this.arrivalLabel.Size = new System.Drawing.Size(21, 13);
             this.arrivalLabel.TabIndex = 1;
             this.arrivalLabel.Text = "Bis";
-            // 
-            // depatureStation
-            // 
-            this.depatureStation.Location = new System.Drawing.Point(120, 63);
-            this.depatureStation.Name = "depatureStation";
-            this.depatureStation.Size = new System.Drawing.Size(100, 20);
-            this.depatureStation.TabIndex = 2;
-            // 
-            // arrivalStation
-            // 
-            this.arrivalStation.Location = new System.Drawing.Point(351, 63);
-            this.arrivalStation.Name = "arrivalStation";
-            this.arrivalStation.Size = new System.Drawing.Size(100, 20);
-            this.arrivalStation.TabIndex = 3;
             // 
             // dateSearch
             // 
@@ -113,7 +99,7 @@ namespace SBBTopSecretFormsApp
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(458, 59);
+            this.searchButton.Location = new System.Drawing.Point(478, 59);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(75, 23);
             this.searchButton.TabIndex = 8;
@@ -179,11 +165,31 @@ namespace SBBTopSecretFormsApp
             this.departurePanelButton.UseVisualStyleBackColor = true;
             this.departurePanelButton.Click += new System.EventHandler(this.departurePanelButton_Click);
             // 
+            // depatureStation
+            // 
+            this.depatureStation.FormattingEnabled = true;
+            this.depatureStation.Location = new System.Drawing.Point(120, 61);
+            this.depatureStation.Name = "depatureStation";
+            this.depatureStation.Size = new System.Drawing.Size(121, 21);
+            this.depatureStation.TabIndex = 13;
+            this.depatureStation.TextUpdate += new System.EventHandler(this.depatureStation_TextUpdate);
+            // 
+            // arrivalStation
+            // 
+            this.arrivalStation.FormattingEnabled = true;
+            this.arrivalStation.Location = new System.Drawing.Point(351, 61);
+            this.arrivalStation.Name = "arrivalStation";
+            this.arrivalStation.Size = new System.Drawing.Size(121, 21);
+            this.arrivalStation.TabIndex = 14;
+            this.arrivalStation.TextUpdate += new System.EventHandler(this.arrivalStation_TextUpdate);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.arrivalStation);
+            this.Controls.Add(this.depatureStation);
             this.Controls.Add(this.departurePanelButton);
             this.Controls.Add(this.searchTimeGroupBox);
             this.Controls.Add(this.arrivalTimeLabel);
@@ -193,8 +199,6 @@ namespace SBBTopSecretFormsApp
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.timeSearch);
             this.Controls.Add(this.dateSearch);
-            this.Controls.Add(this.arrivalStation);
-            this.Controls.Add(this.depatureStation);
             this.Controls.Add(this.arrivalLabel);
             this.Controls.Add(this.depatureLabel);
             this.Name = "Form1";
@@ -210,8 +214,6 @@ namespace SBBTopSecretFormsApp
 
         private System.Windows.Forms.Label depatureLabel;
         private System.Windows.Forms.Label arrivalLabel;
-        private System.Windows.Forms.TextBox depatureStation;
-        private System.Windows.Forms.TextBox arrivalStation;
         private System.Windows.Forms.TextBox dateSearch;
         private System.Windows.Forms.TextBox timeSearch;
         private System.Windows.Forms.Label dateLabel;
@@ -223,6 +225,8 @@ namespace SBBTopSecretFormsApp
         private System.Windows.Forms.RadioButton arrivalTimeSearchButton;
         private System.Windows.Forms.RadioButton depatureTimeButton;
         private System.Windows.Forms.Button departurePanelButton;
+        private System.Windows.Forms.ComboBox depatureStation;
+        private System.Windows.Forms.ComboBox arrivalStation;
     }
 }
 
