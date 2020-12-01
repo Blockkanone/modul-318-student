@@ -68,9 +68,46 @@ namespace SBBTopSecretFormsApp
 
         private void departurePanelButton_Click(object sender, EventArgs e)
         {
-            Form form3 = new Form3();
-            form3.Show();
-            form3.Focus();
+            var StationId = _transport.GetStations(query: depatureStation.Text);
+            var Station = StationId.StationList[0].Name;
+            var depatureStationPanel = _transport.GetStationBoard(station: depatureStation.Text, id: StationId.StationList[0].Id);
+
+            if (depatureStation.Text != "")
+            {
+                var depatureTextResult = _transport.GetStations(query: depatureStation.Text);
+                string depatureText = depatureTextResult.StationList[0].Name;
+
+                DateTime dateSearchConnection = DateTime.Parse(dateSearch.Text);
+                string YearSearch = dateSearchConnection.Year.ToString();
+                string MonthSearch = dateSearchConnection.Month.ToString();
+                string DaySearch = dateSearchConnection.Day.ToString();
+
+                if (MonthSearch == "1" || MonthSearch == "2" || MonthSearch == "3" || MonthSearch == "4" || MonthSearch == "5" || MonthSearch == "6" || MonthSearch == "7" || MonthSearch == "8" || MonthSearch == "9")
+                {
+                    MonthSearch = "0" + MonthSearch;
+                }
+
+                if (DaySearch == "1" || DaySearch == "2" || DaySearch == "3" || DaySearch == "4" || DaySearch == "5" || DaySearch == "6" || DaySearch == "7" || DaySearch == "8" || DaySearch == "9")
+                {
+                    DaySearch = "0" + DaySearch;
+                }
+
+                string DateTimeSearchConnection = YearSearch + "-" + MonthSearch + "-" + DaySearch;
+                var connectionResult1 = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: depatureStationPanel.Entries[0].To, date: DateTimeSearchConnection, time: timeSearch.Text);
+                var connectionResult2 = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: depatureStationPanel.Entries[1].To, date: DateTimeSearchConnection, time: timeSearch.Text);
+                var connectionResult3 = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: depatureStationPanel.Entries[2].To, date: DateTimeSearchConnection, time: timeSearch.Text);
+                var connectionResult4 = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: depatureStationPanel.Entries[3].To, date: DateTimeSearchConnection, time: timeSearch.Text);
+
+
+                Form form3 = new Form3(depatureStationPanel, Station, connectionResult1, connectionResult2, connectionResult3, connectionResult4);
+                form3.Show();
+                form3.Focus();
+
+            }
+            else {
+                MessageBox.Show("Um auf die Abfahrtstafel zuzugreifen, muss bei 'Von' eine Station eingegeben werden");
+                    }
+
         }
     }
 }
