@@ -50,7 +50,7 @@ namespace SBBTopSecretFormsApp
                     }
 
                     string DateTimeSearchConnection = YearSearch + "-" + MonthSearch + "-" + DaySearch;
-                    var connectionResult = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: arrivalStation.Text/*, date: /*DateTimeSearchConnection"2020-12-01", time: /*timeSearch.Text"13:22"*/);
+                    var connectionResult = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: arrivalStation.Text, date: DateTimeSearchConnection, time: timeSearch.Text);
                     Form form2 = new Form2(connectionResult);
                     form2.Show();
                 form2.Focus();
@@ -64,6 +64,13 @@ namespace SBBTopSecretFormsApp
             {
                 MessageBox.Show("Es müssen zwei Stationen eingegeben werden, um eine Verbindung herzustellen");
             }
+        }
+
+        private void departurePanelButton_Click(object sender, EventArgs e)
+        {
+            Form form3 = new Form3();
+            form3.Show();
+            form3.Focus();
         }
     }
 }

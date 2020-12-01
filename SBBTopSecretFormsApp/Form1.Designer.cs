@@ -43,6 +43,7 @@ namespace SBBTopSecretFormsApp
             this.searchTimeGroupBox = new System.Windows.Forms.GroupBox();
             this.arrivalTimeSearchButton = new System.Windows.Forms.RadioButton();
             this.depatureTimeButton = new System.Windows.Forms.RadioButton();
+            this.departurePanelButton = new System.Windows.Forms.Button();
             this.searchTimeGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,11 +169,22 @@ namespace SBBTopSecretFormsApp
             this.depatureTimeButton.TabStop = true;
             this.depatureTimeButton.UseVisualStyleBackColor = true;
             // 
+            // departurePanelButton
+            // 
+            this.departurePanelButton.Location = new System.Drawing.Point(36, 59);
+            this.departurePanelButton.Name = "departurePanelButton";
+            this.departurePanelButton.Size = new System.Drawing.Size(75, 23);
+            this.departurePanelButton.TabIndex = 12;
+            this.departurePanelButton.Text = "Abfahrtstafel";
+            this.departurePanelButton.UseVisualStyleBackColor = true;
+            this.departurePanelButton.Click += new System.EventHandler(this.departurePanelButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.departurePanelButton);
             this.Controls.Add(this.searchTimeGroupBox);
             this.Controls.Add(this.arrivalTimeLabel);
             this.Controls.Add(this.depatureTimeLabel);
@@ -210,6 +222,7 @@ namespace SBBTopSecretFormsApp
         private System.Windows.Forms.GroupBox searchTimeGroupBox;
         private System.Windows.Forms.RadioButton arrivalTimeSearchButton;
         private System.Windows.Forms.RadioButton depatureTimeButton;
+        private System.Windows.Forms.Button departurePanelButton;
     }
 }
 
