@@ -27,7 +27,7 @@ namespace SBBTopSecretFormsApp
 
             InitializeComponent();
 
-
+            // Zeiten werden umgewandelt um sie anzuzigen
             var depatureDateTime1 = DateTime.Parse(depatureStationPanel.Entries[0].Stop.Departure.ToString());
 
             var depatureDateTime2 = DateTime.Parse(depatureStationPanel.Entries[1].Stop.Departure.ToString());
@@ -36,7 +36,7 @@ namespace SBBTopSecretFormsApp
 
             var depatureDateTime4 = DateTime.Parse(depatureStationPanel.Entries[3].Stop.Departure.ToString());
 
-
+            // Alle Informationen werden in die Textfelder der ersten Verbindung eingefügt
             depatureStation.Text = Convert.ToString(station);
 
 
@@ -56,6 +56,7 @@ namespace SBBTopSecretFormsApp
             }
 
 
+            // Alle Informationen werden in die Textfelder der zweiten Verbindung eingefügt
 
             arrivalStationtbx2.Text = Convert.ToString(depatureStationPanel.Entries[1].To);
 
@@ -74,6 +75,7 @@ namespace SBBTopSecretFormsApp
             }
 
 
+            // Alle Informationen werden in die Textfelder der dritten Verbindung eingefügt
 
             arrivalStationtbx3.Text = Convert.ToString(depatureStationPanel.Entries[2].To);
 
@@ -92,6 +94,7 @@ namespace SBBTopSecretFormsApp
             }
 
 
+            // Alle Informationen werden in die Textfelder der vierten Verbindung eingefügt
 
             arrivalStationtbx4.Text = Convert.ToString(depatureStationPanel.Entries[3].To);
 
@@ -108,6 +111,8 @@ namespace SBBTopSecretFormsApp
             {
                 depatureLinetbx4.Text = Convert.ToString(depatureStationPanel.Entries[3].Name);
             }
+
+            // Typen werden überprüft und eingefügt
             var condition = depatureStationPanel.Entries[0].Category;
             if (condition == "B")
             {
@@ -144,6 +149,8 @@ namespace SBBTopSecretFormsApp
             {
                 depatureTypetbx4.Text = "Zug";
             }
+
+            // Karte wird erstellt
             var LatInicial = depatureStationPanel.Station.Coordinate.XCoordinate;
             var LngInicial = depatureStationPanel.Station.Coordinate.YCoordinate;
             depatureStationPanelGmap.DragButton = MouseButtons.Left;
@@ -155,6 +162,7 @@ namespace SBBTopSecretFormsApp
             depatureStationPanelGmap.Zoom = 10;
             depatureStationPanelGmap.AutoScroll = true;
 
+            // Marker der Station wird erstellt
             GMapOverlay markersOverlay = new GMapOverlay("markers");
             GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(LatInicial, LngInicial),
               GMarkerGoogleType.green);
@@ -162,7 +170,7 @@ namespace SBBTopSecretFormsApp
             markersOverlay.Markers.Add(marker);
             depatureStationPanelGmap.Overlays.Add(markersOverlay);
             
-            
+            // Eingener Standord wird gesucht
             GeoCoordinateWatcher watcher = new GeoCoordinateWatcher();
 
             watcher.TryStart(false, TimeSpan.FromMilliseconds(1000));
@@ -179,8 +187,10 @@ namespace SBBTopSecretFormsApp
             
         }
 
+        // Event, wenn Neu landen Knopf gedrückt wird
         private void reload_Click(object sender, EventArgs e)
         {
+            // Komplette Abfrage wird neu geladen mit den eingaben aus der Abfahrtstafel Textbox
             var StationId = _transport.GetStations(query: depatureStation.Text);
             var Station = StationId.StationList[0].Name;
             var depatureStationPanel = _transport.GetStationBoard(station: depatureStation.Text, id: StationId.StationList[0].Id);
@@ -215,7 +225,7 @@ namespace SBBTopSecretFormsApp
                 var connectionResult3 = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: depatureStationPanel.Entries[2].To, date: DateSearchConnections, time: TimeSearchConnections);
                 var connectionResult4 = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: depatureStationPanel.Entries[3].To, date: DateSearchConnections, time: TimeSearchConnections);
 
-
+                // Daten werden wieder umgewandelt und in die Textfelder eingefügt
 
                 var depatureDateTime1 = DateTime.Parse(depatureStationPanel.Entries[0].Stop.Departure.ToString());
 

@@ -164,28 +164,35 @@ namespace SBBTopSecretFormsApp
                 var connectionResult4 = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: depatureStationPanel.Entries[3].To, date: DateTimeSearchConnection, time: timeSearch.Text);
 
                 
-
+                // Form3 wird erstellt und depatureStationPanel, Station, connectionResult1 - 4 werden als Parameter übertragen
                 Form form3 = new Form3(depatureStationPanel, Station, connectionResult1, connectionResult2, connectionResult3, connectionResult4);
+               // Form3 wird angezeigt und Fokussiert
                 form3.Show();
                 form3.Focus();
 
             }
+            // Fehlermeldung sollte keine Eingabe erfolgen
             else {
                 MessageBox.Show("Um auf die Abfahrtstafel zuzugreifen, muss bei 'Von' eine Station eingegeben werden");
                     }
 
         }
 
+
+        // Event, sollte beim Von Textfeld der Text sich ändert
        private void depatureStation_TextUpdate(object sender, EventArgs e)
         {
          
+            // Comboboxliste wird geleert
             if (depatureStation.Items.Count != 0)
             {
                 depatureStation.Items.Clear();
             }
 
+            // Cursor wird an den anfang gesetzt
             depatureStation.SelectionStart = depatureStation.Text.Length;
 
+            // Stationen werden abgerufen und in der Liste eingfügt
             var Station = _transport.GetStations(query: depatureStation.Text);
             int condition = 0;
             while (condition < 5)
@@ -193,39 +200,27 @@ namespace SBBTopSecretFormsApp
                 try { 
                     try { 
                     depatureStation.Items.Add(Station.StationList[condition].Name);
+                        // Fehler behandlung sollte nichts drinstehen
                     } catch(ArgumentNullException) { }
+                    // Fehlerbehandlung sollte keine Station gefunden werden
                     } catch (ArgumentOutOfRangeException) { }
                 condition++;
 
             }
         }
 
+        // Event, sollte beim Bis Textfeld der Text sich ändert
         private void arrivalStation_TextUpdate(object sender, EventArgs e)
         {
 
-           int condit = 0;
-
-            if (arrivalStation.Text == "")
-            {
-                while (condit < arrivalHistory.Length)
-                {
-                        try
-                        {
-                            arrivalStation.Items.Add(arrivalHistory[condit]);
-                        }
-                        catch (ArgumentNullException) { }
-
-                        condit++;
-                }
-            }
-
+            // Combobox wird geleert
             if (arrivalStation.Items.Count != 0)
             {
                 arrivalStation.Items.Clear();
             }
 
-
-           var Station = _transport.GetStations(query: arrivalStation.Text);
+            // Stationen werden abgerufen und in der Liste eingfügt
+            var Station = _transport.GetStations(query: arrivalStation.Text);
             int condition = 0;
             while (condition < 5)
             {
@@ -235,17 +230,25 @@ namespace SBBTopSecretFormsApp
                     {
                         arrivalStation.Items.Add(Station.StationList[condition].Name);
                 }
-                catch (ArgumentNullException) { }
-            } catch (ArgumentOutOfRangeException) { }
+                    // Fehler behandlung sollte nichts drinstehen
+                    catch (ArgumentNullException) { }
+                    // Fehlerbehandlung sollte keine Station gefunden werden
+                }
+                catch (ArgumentOutOfRangeException) { }
             condition++;
+                // Cursor wird an anfang gesetzt
                 arrivalStation.SelectionStart = arrivalStation.Text.Length;
             } 
         }
 
+        // Event, wenn auf den Suchverlauf laden Knopf gedrückt wird
         private void historyLoad_Click(object sender, EventArgs e)
         {
+            // Items werden aus der Combobox entfernt
             depatureStation.Items.Clear();
             arrivalStation.Items.Clear();
+
+            // Suchverlauf wird eingefügt
             for(int i = 199; i > counter; i--)
             {
                 try
@@ -253,14 +256,18 @@ namespace SBBTopSecretFormsApp
                     depatureStation.Items.Add(depatureHistory[i]);
                     arrivalStation.Items.Add(arrivalHistory[i]);
                 }
+                // Fehlerbehandlung sollte nichts im Suchverlauf stehen
                 catch (IndexOutOfRangeException) { }
             }
         }
 
+        // Event, wenn auf den Suchverlauf löschen Knopf gedrückt wird
         private void historyDelete_Click(object sender, EventArgs e)
         {
+            // Suchverlauf wird leer überschrieben
             depatureHistory = new string[] { "" };
             arrivalHistory = new string[] { "" };
+            // Liste wird geleert
             depatureStation.Items.Clear();
             arrivalStation.Items.Clear();
         }

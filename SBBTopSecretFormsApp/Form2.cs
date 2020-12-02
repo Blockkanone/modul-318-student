@@ -22,6 +22,7 @@ namespace SBBTopSecretFormsApp
         public Form2(Connections connectionResult, StationBoardRoot depatureStationPanel)
         {
             InitializeComponent();
+            // Verschiedene Zeiten zum anzeigen werden erstellt
             var depatureDateTime1 = DateTime.Parse(connectionResult.ConnectionList[0].From.Departure);
             var arrivalDateTime1 = DateTime.Parse(connectionResult.ConnectionList[0].To.Arrival);
 
@@ -34,6 +35,7 @@ namespace SBBTopSecretFormsApp
             var depatureDateTime4 = DateTime.Parse(connectionResult.ConnectionList[3].From.Departure);
             var arrivalDateTime4 = DateTime.Parse(connectionResult.ConnectionList[3].To.Arrival);
 
+            // Alles wird bei der ersten Verbindung in die Textfelder eingefügt
 
             depatureStation1.Text = Convert.ToString(connectionResult.ConnectionList[0].From.Station.Name);
             arrivalStation1.Text = Convert.ToString(connectionResult.ConnectionList[0].To.Station.Name);
@@ -46,7 +48,7 @@ namespace SBBTopSecretFormsApp
             depatureStationNrtbx1.Text = Convert.ToString(connectionResult.ConnectionList[0].From.Platform);
             arrivalStationNrtbx1.Text = Convert.ToString(connectionResult.ConnectionList[0].To.Platform);
 
-
+            // Die Typen werden überprüft und eingefügt
             var condition = depatureStationPanel.Entries[0].Category;
             if (condition == "B")
             {
@@ -92,8 +94,9 @@ namespace SBBTopSecretFormsApp
                 depatureTypetbx4.Text = "Zug";
                 arrivalTypetbx4.Text = "Zug";
             }
-            
 
+
+            // Alles wird bei der zweiten Verbindung in die Textfelder eingefügt
 
 
             depatureStation2.Text = Convert.ToString(connectionResult.ConnectionList[1].From.Station.Name);
@@ -107,7 +110,7 @@ namespace SBBTopSecretFormsApp
             depatureStationNrtbx2.Text = Convert.ToString(connectionResult.ConnectionList[1].From.Platform);
             arrivalStationNrtbx2.Text = Convert.ToString(connectionResult.ConnectionList[1].To.Platform);
 
-
+            // Alles wird bei der dritten Verbindung in die Textfelder eingefügt
 
             depatureStation3.Text = Convert.ToString(connectionResult.ConnectionList[2].From.Station.Name);
             arrivalStation3.Text = Convert.ToString(connectionResult.ConnectionList[2].To.Station.Name);
@@ -120,7 +123,7 @@ namespace SBBTopSecretFormsApp
             depatureStationNrtbx3.Text = Convert.ToString(connectionResult.ConnectionList[2].From.Platform);
             arrivalStationNrtbx3.Text = Convert.ToString(connectionResult.ConnectionList[2].To.Platform);
 
-
+            // Alles wird bei der vierten Verbindung in die Textfelder eingefügt
 
             depatureStation4.Text = Convert.ToString(connectionResult.ConnectionList[3].From.Station.Name);
             arrivalStation4.Text = Convert.ToString(connectionResult.ConnectionList[3].To.Station.Name);
@@ -134,9 +137,10 @@ namespace SBBTopSecretFormsApp
             arrivalStationNrtbx4.Text = Convert.ToString(connectionResult.ConnectionList[3].To.Platform);
         }
  
-
+        // Event, wenn auf den Als Email versenden Knopf gedrückt wird
             private void emailbtn_Click(object sender, EventArgs e)
             {
+            // Email wird versendet
                     Process.Start(
                     "mailto:" + emailtbx.Text +
                     "?subject=" + "Verbindung Teilen" +
@@ -146,9 +150,8 @@ namespace SBBTopSecretFormsApp
                     "Verbindung 3 " + "Von: " + depatureStation3.Text + " Bis: " + arrivalStation3 + " Datum: " + depatureDatetbx3 + " Uhrzeit: " + depatureTimetbx3 + " Typ: " + depatureTypetbx3 + " Linie: " + depatureLinetbx3 + " Abfahrtsgleis: " + depatureStationNrtbx3 + "Ankunftsgleis" + arrivalStationNrtbx3 + "/n" +
                     "Verbindung 4 " + "Von: " + depatureStation4.Text + " Bis: " + arrivalStation4 + " Datum: " + depatureDatetbx4 + " Uhrzeit: " + depatureTimetbx4 + " Typ: " + depatureTypetbx4 + " Linie: " + depatureLinetbx4 + " Abfahrtsgleis: " + depatureStationNrtbx4 + "Ankunftsgleis" + arrivalStationNrtbx4 + "/n"
                     );
-
+            // Meldung über den Erfolg
             MessageBox.Show("Email erfolgreich versendet");
-            // emailtbx.Text.Replace();
         }
     }
     }
