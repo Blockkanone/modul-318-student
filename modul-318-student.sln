@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwissTransportTest", "tests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBBTopSecretFormsApp", "SBBTopSecretFormsApp\SBBTopSecretFormsApp.csproj", "{8DAF4811-CF87-4107-B577-92A587AC95E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{1DBA34ED-F50D-4998-AE78-F07F6F526F12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8DAF4811-CF87-4107-B577-92A587AC95E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DAF4811-CF87-4107-B577-92A587AC95E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DAF4811-CF87-4107-B577-92A587AC95E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DBA34ED-F50D-4998-AE78-F07F6F526F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DBA34ED-F50D-4998-AE78-F07F6F526F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DBA34ED-F50D-4998-AE78-F07F6F526F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DBA34ED-F50D-4998-AE78-F07F6F526F12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
