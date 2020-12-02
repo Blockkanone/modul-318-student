@@ -44,6 +44,8 @@ namespace SBBTopSecretFormsApp
             this.departurePanelButton = new System.Windows.Forms.Button();
             this.depatureStation = new System.Windows.Forms.ComboBox();
             this.arrivalStation = new System.Windows.Forms.ComboBox();
+            this.historyLoad = new System.Windows.Forms.Button();
+            this.historyDelete = new System.Windows.Forms.Button();
             this.searchTimeGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,7 +101,7 @@ namespace SBBTopSecretFormsApp
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(478, 59);
+            this.searchButton.Location = new System.Drawing.Point(529, 107);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(75, 23);
             this.searchButton.TabIndex = 8;
@@ -110,7 +112,7 @@ namespace SBBTopSecretFormsApp
             // depatureTimeLabel
             // 
             this.depatureTimeLabel.AutoSize = true;
-            this.depatureTimeLabel.Location = new System.Drawing.Point(348, 109);
+            this.depatureTimeLabel.Location = new System.Drawing.Point(335, 111);
             this.depatureTimeLabel.Name = "depatureTimeLabel";
             this.depatureTimeLabel.Size = new System.Drawing.Size(62, 13);
             this.depatureTimeLabel.TabIndex = 9;
@@ -119,7 +121,7 @@ namespace SBBTopSecretFormsApp
             // arrivalTimeLabel
             // 
             this.arrivalTimeLabel.AutoSize = true;
-            this.arrivalTimeLabel.Location = new System.Drawing.Point(471, 109);
+            this.arrivalTimeLabel.Location = new System.Drawing.Point(458, 111);
             this.arrivalTimeLabel.Name = "arrivalTimeLabel";
             this.arrivalTimeLabel.Size = new System.Drawing.Size(65, 13);
             this.arrivalTimeLabel.TabIndex = 10;
@@ -129,7 +131,7 @@ namespace SBBTopSecretFormsApp
             // 
             this.searchTimeGroupBox.Controls.Add(this.arrivalTimeSearchButton);
             this.searchTimeGroupBox.Controls.Add(this.depatureTimeButton);
-            this.searchTimeGroupBox.Location = new System.Drawing.Point(417, 93);
+            this.searchTimeGroupBox.Location = new System.Drawing.Point(404, 95);
             this.searchTimeGroupBox.Name = "searchTimeGroupBox";
             this.searchTimeGroupBox.Size = new System.Drawing.Size(48, 56);
             this.searchTimeGroupBox.TabIndex = 11;
@@ -170,7 +172,7 @@ namespace SBBTopSecretFormsApp
             this.depatureStation.FormattingEnabled = true;
             this.depatureStation.Location = new System.Drawing.Point(120, 61);
             this.depatureStation.Name = "depatureStation";
-            this.depatureStation.Size = new System.Drawing.Size(121, 21);
+            this.depatureStation.Size = new System.Drawing.Size(206, 21);
             this.depatureStation.TabIndex = 13;
             this.depatureStation.TextUpdate += new System.EventHandler(this.depatureStation_TextUpdate);
             // 
@@ -179,15 +181,37 @@ namespace SBBTopSecretFormsApp
             this.arrivalStation.FormattingEnabled = true;
             this.arrivalStation.Location = new System.Drawing.Point(351, 61);
             this.arrivalStation.Name = "arrivalStation";
-            this.arrivalStation.Size = new System.Drawing.Size(121, 21);
+            this.arrivalStation.Size = new System.Drawing.Size(253, 21);
             this.arrivalStation.TabIndex = 14;
             this.arrivalStation.TextUpdate += new System.EventHandler(this.arrivalStation_TextUpdate);
+            // 
+            // historyLoad
+            // 
+            this.historyLoad.Location = new System.Drawing.Point(623, 59);
+            this.historyLoad.Name = "historyLoad";
+            this.historyLoad.Size = new System.Drawing.Size(121, 23);
+            this.historyLoad.TabIndex = 15;
+            this.historyLoad.Text = "Suchverlauf laden";
+            this.historyLoad.UseVisualStyleBackColor = true;
+            this.historyLoad.Click += new System.EventHandler(this.historyLoad_Click);
+            // 
+            // historyDelete
+            // 
+            this.historyDelete.Location = new System.Drawing.Point(623, 106);
+            this.historyDelete.Name = "historyDelete";
+            this.historyDelete.Size = new System.Drawing.Size(121, 23);
+            this.historyDelete.TabIndex = 16;
+            this.historyDelete.Text = "Suchverlauf löschen";
+            this.historyDelete.UseVisualStyleBackColor = true;
+            this.historyDelete.Click += new System.EventHandler(this.historyDelete_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.historyDelete);
+            this.Controls.Add(this.historyLoad);
             this.Controls.Add(this.arrivalStation);
             this.Controls.Add(this.depatureStation);
             this.Controls.Add(this.departurePanelButton);
@@ -227,6 +251,8 @@ namespace SBBTopSecretFormsApp
         private System.Windows.Forms.Button departurePanelButton;
         private System.Windows.Forms.ComboBox depatureStation;
         private System.Windows.Forms.ComboBox arrivalStation;
+        private System.Windows.Forms.Button historyLoad;
+        private System.Windows.Forms.Button historyDelete;
     }
 }
 

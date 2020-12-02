@@ -125,6 +125,9 @@ namespace SBBTopSecretFormsApp
             this.depatureStation4 = new System.Windows.Forms.TextBox();
             this.arrivalLabel4 = new System.Windows.Forms.Label();
             this.depatureLabel4 = new System.Windows.Forms.Label();
+            this.emailtbx = new System.Windows.Forms.TextBox();
+            this.EmailLabel = new System.Windows.Forms.Label();
+            this.emailbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // arrivalStation1
@@ -895,11 +898,40 @@ namespace SBBTopSecretFormsApp
             this.depatureLabel4.TabIndex = 76;
             this.depatureLabel4.Text = "Von";
             // 
+            // emailtbx
+            // 
+            this.emailtbx.Location = new System.Drawing.Point(723, 41);
+            this.emailtbx.Name = "emailtbx";
+            this.emailtbx.Size = new System.Drawing.Size(170, 20);
+            this.emailtbx.TabIndex = 100;
+            // 
+            // EmailLabel
+            // 
+            this.EmailLabel.AutoSize = true;
+            this.EmailLabel.Location = new System.Drawing.Point(720, 25);
+            this.EmailLabel.Name = "EmailLabel";
+            this.EmailLabel.Size = new System.Drawing.Size(73, 13);
+            this.EmailLabel.TabIndex = 101;
+            this.EmailLabel.Text = "Email-Adresse";
+            // 
+            // emailbtn
+            // 
+            this.emailbtn.Location = new System.Drawing.Point(723, 67);
+            this.emailbtn.Name = "emailbtn";
+            this.emailbtn.Size = new System.Drawing.Size(170, 23);
+            this.emailbtn.TabIndex = 102;
+            this.emailbtn.Text = "per Email versenden";
+            this.emailbtn.UseVisualStyleBackColor = true;
+            this.emailbtn.Click += new System.EventHandler(this.emailbtn_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 669);
+            this.Controls.Add(this.emailbtn);
+            this.Controls.Add(this.EmailLabel);
+            this.Controls.Add(this.emailtbx);
             this.Controls.Add(this.arrivalStationNrLabel4);
             this.Controls.Add(this.arrivalLineLabel4);
             this.Controls.Add(this.arrivalTypeLabel4);
@@ -1101,5 +1133,8 @@ namespace SBBTopSecretFormsApp
         private System.Windows.Forms.Label arrivalLabel4;
         private System.Windows.Forms.Label depatureLabel4;
         private System.Windows.Forms.Label arrivalLineLabel4;
+        private System.Windows.Forms.TextBox emailtbx;
+        private System.Windows.Forms.Label EmailLabel;
+        private System.Windows.Forms.Button emailbtn;
     }
 }

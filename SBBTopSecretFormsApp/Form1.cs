@@ -13,33 +13,39 @@ namespace SBBTopSecretFormsApp
 {
     public partial class Form1 : Form
     {
-
+        // Membervariable _transport wird erstellt
         ITransport _transport = new Transport();
 
 
         public Form1()
         {
             InitializeComponent();
+            // Das aktuelle Datum wird in das Datumtext feld eingefügt
             dateSearch.Text = DateTime.Now.ToShortDateString();
             timeSearch.Text = DateTime.Now.ToShortTimeString();
         }
 
-       // string[] depatureHistory;
+        // Array für den Verlauf wird erstellt
+        string[] depatureHistory = new string[200];
+        string[] arrivalHistory = new string[200];
+        int counter = 199;
 
+        // Event, wenn der Suchen Knopf gedrückt wird
         private void searchButton_Click(object sender, EventArgs e)
         {
+            // StationsBoard wird vorbereitet um als Parameter zu übergeben
            var StationId = _transport.GetStations(query: depatureStation.Text);
             var depatureStationPanel = _transport.GetStationBoard(station: depatureStation.Text, id: StationId.StationList[0].Id);
 
+            // Abfrage ob alles ausgefüllt wurde
             if (depatureStation.Text != "" && arrivalStation.Text != "") { 
+                // Textfelder werden ausgelesen
             var depatureTextResult = _transport.GetStations(query: depatureStation.Text);
             var arrivalTextResult = _transport.GetStations(query: arrivalStation.Text);
 
                 try
                 {
-               string depatureText = depatureTextResult.StationList[0].Name;
-                    string arrivalText = arrivalTextResult.StationList[0].Name;
-
+                    // Datum wird in das Richtige Vormat Jahr-Monat-Tag umgewandelt
                     DateTime dateSearchConnection = DateTime.Parse(dateSearch.Text);
                     string YearSearch = dateSearchConnection.Year.ToString();
                     string MonthSearch = dateSearchConnection.Month.ToString();
@@ -56,26 +62,65 @@ namespace SBBTopSecretFormsApp
                     }
 
                     string DateTimeSearchConnection = YearSearch + "-" + MonthSearch + "-" + DaySearch;
+                    // Abfrage für die Verbindung wird erstellt
                     var connectionResult = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: arrivalStation.Text, date: DateTimeSearchConnection, time: timeSearch.Text);
-                    
-                    
-                  /*  string[] depatureHistory = { depatureStation.Text };
 
-                    int condition = 0;
-                    while (condition < 5)
+                    
+                    try
                     {
-                        depatureStation.Items.Add(depatureHistory[condition]);
-                            }*/
+                        // Suchverlauf wird gespeichert
+                        depatureHistory[counter] = connectionResult.ConnectionList[0].From.Station.Name;
+                        arrivalHistory[counter] = connectionResult.ConnectionList[0].To.Station.Name;
+                        counter--;
+                    }
+                    // Bei fehler beginnt der Suchverlauf von neuem
+                    catch(IndexOutOfRangeException)
+                    {
+                       depatureHistory = new string[] { connectionResult.ConnectionList[0].From.Station.Name};
+                       arrivalHistory = new string[] { connectionResult.ConnectionList[0].To.Station.Name};
+                    }
 
+                    // Suchverlauf wird der vorgeschlagenen Liste eingefügt
+                    int condit = 0;
+
+                    depatureStation.Items.Clear();
+                    arrivalStation.Items.Clear();
+
+                    while (condit < depatureHistory.Length)
+                        {
+                            try
+                            {
+                                depatureStation.Items.Add(depatureHistory[condit]);
+                            }
+                            catch (ArgumentNullException) { }
+                            condit++;
+                        }
+
+                    condit = 0;
+
+                    while (condit < arrivalHistory.Length)
+                        {
+                            try
+                            {
+                                arrivalStation.Items.Add(arrivalHistory[condit]);
+                            }
+                            catch (ArgumentNullException) { }
+                            condit++;
+                        }
+
+                    // Form2 wird erstellt. Parameter connectionResult und depatureStationPanel wird übertragen
                     Form form2 = new Form2(connectionResult, depatureStationPanel);
+                    // Form2 wird angezeigt und fokussiert
                     form2.Show();
                 form2.Focus();
             }
+                // Sollte keine Station gefunden werden
             catch(ArgumentOutOfRangeException) 
             { 
                 MessageBox.Show("Es wurde keine Station gefunden");
             }
             }
+            // Sollte eingabe nicht vollständig sein, wird darauf hingewiesen
             else
             {
                 MessageBox.Show("Es müssen zwei Stationen eingegeben werden, um eine Verbindung herzustellen");
@@ -83,18 +128,19 @@ namespace SBBTopSecretFormsApp
             
         }
         
-
+        // Event, wenn auf den Abfahrtstafel Knopf gedrückt wird
         private void departurePanelButton_Click(object sender, EventArgs e)
         {
-            var StationId = _transport.GetStations(query: depatureStation.Text);
-            var Station = StationId.StationList[0].Name;
-            var depatureStationPanel = _transport.GetStationBoard(station: depatureStation.Text, id: StationId.StationList[0].Id);
-
+              // überprüfung, ob etwas ausgefüllt wurde
             if (depatureStation.Text != "")
             {
-                var depatureTextResult = _transport.GetStations(query: depatureStation.Text);
-                string depatureText = depatureTextResult.StationList[0].Name;
-
+            // GetStationBoard wird erstellt         
+                var StationId = _transport.GetStations(query: depatureStation.Text);
+                var Station = StationId.StationList[0].Name;
+                var depatureStationPanel = _transport.GetStationBoard(station: depatureStation.Text, id: StationId.StationList[0].Id);
+         
+          
+                // Für Abfrage wird richtiges Datum format erstellt
                 DateTime dateSearchConnection = DateTime.Parse(dateSearch.Text);
                 string YearSearch = dateSearchConnection.Year.ToString();
                 string MonthSearch = dateSearchConnection.Month.ToString();
@@ -110,12 +156,14 @@ namespace SBBTopSecretFormsApp
                     DaySearch = "0" + DaySearch;
                 }
 
+                // Abfrage für die ersten 4 ergebnisseerfolgen
                 string DateTimeSearchConnection = YearSearch + "-" + MonthSearch + "-" + DaySearch;
                 var connectionResult1 = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: depatureStationPanel.Entries[0].To, date: DateTimeSearchConnection, time: timeSearch.Text);
                 var connectionResult2 = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: depatureStationPanel.Entries[1].To, date: DateTimeSearchConnection, time: timeSearch.Text);
                 var connectionResult3 = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: depatureStationPanel.Entries[2].To, date: DateTimeSearchConnection, time: timeSearch.Text);
                 var connectionResult4 = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: depatureStationPanel.Entries[3].To, date: DateTimeSearchConnection, time: timeSearch.Text);
 
+                
 
                 Form form3 = new Form3(depatureStationPanel, Station, connectionResult1, connectionResult2, connectionResult3, connectionResult4);
                 form3.Show();
@@ -130,41 +178,91 @@ namespace SBBTopSecretFormsApp
 
        private void depatureStation_TextUpdate(object sender, EventArgs e)
         {
-           
-           /* if(depatureStation.Items.Count != 0)
+         
+            if (depatureStation.Items.Count != 0)
             {
                 depatureStation.Items.Clear();
             }
+
+            depatureStation.SelectionStart = depatureStation.Text.Length;
+
             var Station = _transport.GetStations(query: depatureStation.Text);
             int condition = 0;
             while (condition < 5)
             {
                 try { 
-                    depatureStation.Items.Add(Station.StationList[condition].Name); 
-                } catch (ArgumentOutOfRangeException) { }
+                    try { 
+                    depatureStation.Items.Add(Station.StationList[condition].Name);
+                    } catch(ArgumentNullException) { }
+                    } catch (ArgumentOutOfRangeException) { }
                 condition++;
 
-            }*/
+            }
         }
 
         private void arrivalStation_TextUpdate(object sender, EventArgs e)
         {
-          /*  if (arrivalStation.Items.Count != 0)
+
+           int condit = 0;
+
+            if (arrivalStation.Text == "")
+            {
+                while (condit < arrivalHistory.Length)
+                {
+                        try
+                        {
+                            arrivalStation.Items.Add(arrivalHistory[condit]);
+                        }
+                        catch (ArgumentNullException) { }
+
+                        condit++;
+                }
+            }
+
+            if (arrivalStation.Items.Count != 0)
             {
                 arrivalStation.Items.Clear();
             }
 
-            var Station = _transport.GetStations(query: arrivalStation.Text);
+
+           var Station = _transport.GetStations(query: arrivalStation.Text);
             int condition = 0;
             while (condition < 5)
             {
-                arrivalStation.Items.Clear();
                 try
                 {
-                    arrivalStation.Items.Add(Station.StationList[condition].Name);
+                    try
+                    {
+                        arrivalStation.Items.Add(Station.StationList[condition].Name);
+                }
+                catch (ArgumentNullException) { }
             } catch (ArgumentOutOfRangeException) { }
             condition++;
-            } */
+                arrivalStation.SelectionStart = arrivalStation.Text.Length;
+            } 
+        }
+
+        private void historyLoad_Click(object sender, EventArgs e)
+        {
+            depatureStation.Items.Clear();
+            arrivalStation.Items.Clear();
+            for(int i = 199; i > counter; i--)
+            {
+                try
+                {
+                    depatureStation.Items.Add(depatureHistory[i]);
+                    arrivalStation.Items.Add(arrivalHistory[i]);
+                }
+                catch (IndexOutOfRangeException) { }
+            }
+        }
+
+        private void historyDelete_Click(object sender, EventArgs e)
+        {
+            depatureHistory = new string[] { "" };
+            arrivalHistory = new string[] { "" };
+            depatureStation.Items.Clear();
+            arrivalStation.Items.Clear();
         }
     }
 }

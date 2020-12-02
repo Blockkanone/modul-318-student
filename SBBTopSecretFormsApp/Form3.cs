@@ -9,6 +9,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GMap.NET;
+using GMap.NET.MapProviders;
+using GMap.NET.WindowsForms;
+using GMap.NET.WindowsForms.Markers;
+using System.Device.Location;
 
 namespace SBBTopSecretFormsApp
 {
@@ -139,6 +144,39 @@ namespace SBBTopSecretFormsApp
             {
                 depatureTypetbx4.Text = "Zug";
             }
+            var LatInicial = depatureStationPanel.Station.Coordinate.XCoordinate;
+            var LngInicial = depatureStationPanel.Station.Coordinate.YCoordinate;
+            depatureStationPanelGmap.DragButton = MouseButtons.Left;
+            depatureStationPanelGmap.CanDragMap = true;
+            depatureStationPanelGmap.MapProvider = GMapProviders.GoogleMap;
+            depatureStationPanelGmap.Position = new PointLatLng(LatInicial, LngInicial);
+            depatureStationPanelGmap.MinZoom = 0;
+            depatureStationPanelGmap.MaxZoom = 24;
+            depatureStationPanelGmap.Zoom = 10;
+            depatureStationPanelGmap.AutoScroll = true;
+
+            GMapOverlay markersOverlay = new GMapOverlay("markers");
+            GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(LatInicial, LngInicial),
+              GMarkerGoogleType.green);
+            markersOverlay.Markers.Clear();
+            markersOverlay.Markers.Add(marker);
+            depatureStationPanelGmap.Overlays.Add(markersOverlay);
+            
+            
+            GeoCoordinateWatcher watcher = new GeoCoordinateWatcher();
+
+            watcher.TryStart(false, TimeSpan.FromMilliseconds(1000));
+
+            GeoCoordinate coord = watcher.Position.Location;
+
+            if (coord.IsUnknown != true)
+            {
+                GMarkerGoogle OwnMarker = new GMarkerGoogle(new PointLatLng(coord.Latitude, coord.Longitude),
+              GMarkerGoogleType.red);
+                markersOverlay.Markers.Add(OwnMarker);
+                depatureStationPanelGmap.Overlays.Add(markersOverlay);
+            }
+            
         }
 
         private void reload_Click(object sender, EventArgs e)
@@ -295,6 +333,38 @@ namespace SBBTopSecretFormsApp
                 else
                 {
                     depatureTypetbx4.Text = "Zug";
+                }
+                var LatInicial = depatureStationPanel.Station.Coordinate.XCoordinate;
+                var LngInicial = depatureStationPanel.Station.Coordinate.YCoordinate;
+                depatureStationPanelGmap.DragButton = MouseButtons.Left;
+                depatureStationPanelGmap.CanDragMap = true;
+                depatureStationPanelGmap.MapProvider = GMapProviders.GoogleMap;
+                depatureStationPanelGmap.Position = new PointLatLng(LatInicial, LngInicial);
+                depatureStationPanelGmap.MinZoom = 0;
+                depatureStationPanelGmap.MaxZoom = 24;
+                depatureStationPanelGmap.Zoom = 10;
+                depatureStationPanelGmap.AutoScroll = true;
+
+                GMapOverlay markersOverlay = new GMapOverlay("markers");
+                GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(LatInicial, LngInicial),
+                  GMarkerGoogleType.green);
+                markersOverlay.Markers.Clear();
+                markersOverlay.Markers.Add(marker);
+                depatureStationPanelGmap.Overlays.Add(markersOverlay);
+
+
+                GeoCoordinateWatcher watcher = new GeoCoordinateWatcher();
+
+                watcher.TryStart(false, TimeSpan.FromMilliseconds(10000));
+
+                GeoCoordinate coord = watcher.Position.Location;
+
+                if (coord.IsUnknown != true)
+                {
+                    GMarkerGoogle OwnMarker = new GMarkerGoogle(new PointLatLng(coord.Latitude, coord.Longitude),
+                  GMarkerGoogleType.red);
+                    markersOverlay.Markers.Add(OwnMarker);
+                    depatureStationPanelGmap.Overlays.Add(markersOverlay);
                 }
             }
         }

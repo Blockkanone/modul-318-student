@@ -80,6 +80,7 @@ namespace SBBTopSecretFormsApp
             this.depatureTimetbx4 = new System.Windows.Forms.TextBox();
             this.depatureDatetbx4 = new System.Windows.Forms.TextBox();
             this.reload = new System.Windows.Forms.Button();
+            this.depatureStationPanelGmap = new GMap.NET.WindowsForms.GMapControl();
             this.SuspendLayout();
             // 
             // depatureStationNrLabel1
@@ -492,11 +493,38 @@ namespace SBBTopSecretFormsApp
             this.reload.UseVisualStyleBackColor = true;
             this.reload.Click += new System.EventHandler(this.reload_Click);
             // 
+            // depatureStationPanelGmap
+            // 
+            this.depatureStationPanelGmap.Bearing = 0F;
+            this.depatureStationPanelGmap.CanDragMap = true;
+            this.depatureStationPanelGmap.EmptyTileColor = System.Drawing.Color.Navy;
+            this.depatureStationPanelGmap.GrayScaleMode = false;
+            this.depatureStationPanelGmap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.depatureStationPanelGmap.LevelsKeepInMemmory = 5;
+            this.depatureStationPanelGmap.Location = new System.Drawing.Point(521, 102);
+            this.depatureStationPanelGmap.MarkersEnabled = true;
+            this.depatureStationPanelGmap.MaxZoom = 2;
+            this.depatureStationPanelGmap.MinZoom = 2;
+            this.depatureStationPanelGmap.MouseWheelZoomEnabled = true;
+            this.depatureStationPanelGmap.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.depatureStationPanelGmap.Name = "depatureStationPanelGmap";
+            this.depatureStationPanelGmap.NegativeMode = false;
+            this.depatureStationPanelGmap.PolygonsEnabled = true;
+            this.depatureStationPanelGmap.RetryLoadTile = 0;
+            this.depatureStationPanelGmap.RoutesEnabled = true;
+            this.depatureStationPanelGmap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.depatureStationPanelGmap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.depatureStationPanelGmap.ShowTileGridLines = false;
+            this.depatureStationPanelGmap.Size = new System.Drawing.Size(332, 437);
+            this.depatureStationPanelGmap.TabIndex = 73;
+            this.depatureStationPanelGmap.Zoom = 0D;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(881, 579);
+            this.Controls.Add(this.depatureStationPanelGmap);
             this.Controls.Add(this.reload);
             this.Controls.Add(this.arrivalStation4);
             this.Controls.Add(this.arrivalStationtbx4);
@@ -608,5 +636,6 @@ namespace SBBTopSecretFormsApp
         private System.Windows.Forms.TextBox depatureTimetbx4;
         private System.Windows.Forms.TextBox depatureDatetbx4;
         private System.Windows.Forms.Button reload;
+        private GMap.NET.WindowsForms.GMapControl depatureStationPanelGmap;
     }
 }

@@ -3,9 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,10 +48,11 @@ namespace SBBTopSecretFormsApp
 
 
             var condition = depatureStationPanel.Entries[0].Category;
-            if (condition == "B") { 
+            if (condition == "B")
+            {
 
-            depatureTypetbx1.Text = "Bus";
-            arrivalTypetbx1.Text = "Bus";
+                depatureTypetbx1.Text = "Bus";
+                arrivalTypetbx1.Text = "Bus";
             }
             else
             {
@@ -88,18 +92,7 @@ namespace SBBTopSecretFormsApp
                 depatureTypetbx4.Text = "Zug";
                 arrivalTypetbx4.Text = "Zug";
             }
-            // connectionResult.ConnectionList[0].To
-            /* var condition = 0;
-             var counter = 0;
-             string coundit = Convert.ToString(depatureStationPanel.Entries[counter].Number); */
-            /*while (condition == 0)
-
-                if (coundit == "")
-                {
-
-                }
-                counter++;
-            }*/
+            
 
 
 
@@ -140,10 +133,23 @@ namespace SBBTopSecretFormsApp
             depatureStationNrtbx4.Text = Convert.ToString(connectionResult.ConnectionList[3].From.Platform);
             arrivalStationNrtbx4.Text = Convert.ToString(connectionResult.ConnectionList[3].To.Platform);
         }
+ 
 
+            private void emailbtn_Click(object sender, EventArgs e)
+            {
+                    Process.Start(
+                    "mailto:" + emailtbx.Text +
+                    "?subject=" + "Verbindung Teilen" +
+                    "&body=" + 
+                    "Verbindung 1 " + "Von: " + depatureStation1.Text + " Bis: " + arrivalStation1 + " Datum: " + depatureDatetbx1 + " Uhrzeit: " + depatureTimetbx1 + " Typ: " + depatureTypetbx1 + " Linie: " + depatureLinetbx1 + " Abfahrtsgleis: " + depatureStationNrtbx1 + "Ankunftsgleis" + arrivalStationNrtbx1 + "/n" +
+                    "Verbindung 2 " + "Von: " + depatureStation2.Text + " Bis: " + arrivalStation2 + " Datum: " + depatureDatetbx2 + " Uhrzeit: " + depatureTimetbx2 + " Typ: " + depatureTypetbx2 + " Linie: " + depatureLinetbx2 + " Abfahrtsgleis: " + depatureStationNrtbx2 + "Ankunftsgleis" + arrivalStationNrtbx2 + "/n" +
+                    "Verbindung 3 " + "Von: " + depatureStation3.Text + " Bis: " + arrivalStation3 + " Datum: " + depatureDatetbx3 + " Uhrzeit: " + depatureTimetbx3 + " Typ: " + depatureTypetbx3 + " Linie: " + depatureLinetbx3 + " Abfahrtsgleis: " + depatureStationNrtbx3 + "Ankunftsgleis" + arrivalStationNrtbx3 + "/n" +
+                    "Verbindung 4 " + "Von: " + depatureStation4.Text + " Bis: " + arrivalStation4 + " Datum: " + depatureDatetbx4 + " Uhrzeit: " + depatureTimetbx4 + " Typ: " + depatureTypetbx4 + " Linie: " + depatureLinetbx4 + " Abfahrtsgleis: " + depatureStationNrtbx4 + "Ankunftsgleis" + arrivalStationNrtbx4 + "/n"
+                    );
 
-
-
-      
+            MessageBox.Show("Email erfolgreich versendet");
+            // emailtbx.Text.Replace();
+        }
     }
-}
+    }
+
