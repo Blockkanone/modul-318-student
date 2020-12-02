@@ -48,6 +48,19 @@ namespace SBBTopSecretFormsApp
             depatureStationNrtbx1.Text = Convert.ToString(connectionResult.ConnectionList[0].From.Platform);
             arrivalStationNrtbx1.Text = Convert.ToString(connectionResult.ConnectionList[0].To.Platform);
 
+            if (depatureStationPanel.Entries[0].Category == "B")
+            {
+                depatureLinetbx1.Text = Convert.ToString(depatureStationPanel.Entries[0].Number);
+                arrivalLinetbx1.Text = Convert.ToString(depatureStationPanel.Entries[0].Number);
+            }
+            else
+            {
+                depatureLinetbx1.Text = Convert.ToString(depatureStationPanel.Entries[0].Name);
+                arrivalLinetbx1.Text = Convert.ToString(depatureStationPanel.Entries[0].Name);
+            }
+
+
+
             // Die Typen werden überprüft und eingefügt
             var condition = depatureStationPanel.Entries[0].Category;
             if (condition == "B")
@@ -110,6 +123,17 @@ namespace SBBTopSecretFormsApp
             depatureStationNrtbx2.Text = Convert.ToString(connectionResult.ConnectionList[1].From.Platform);
             arrivalStationNrtbx2.Text = Convert.ToString(connectionResult.ConnectionList[1].To.Platform);
 
+            if (depatureStationPanel.Entries[0].Category == "B")
+            {
+                depatureLinetbx2.Text = Convert.ToString(depatureStationPanel.Entries[0].Number);
+                arrivalLinetbx2.Text = Convert.ToString(depatureStationPanel.Entries[0].Number);
+            }
+            else
+            {
+                depatureLinetbx2.Text = Convert.ToString(depatureStationPanel.Entries[0].Name);
+                arrivalLinetbx2.Text = Convert.ToString(depatureStationPanel.Entries[0].Name);
+            }
+
             // Alles wird bei der dritten Verbindung in die Textfelder eingefügt
 
             depatureStation3.Text = Convert.ToString(connectionResult.ConnectionList[2].From.Station.Name);
@@ -123,6 +147,17 @@ namespace SBBTopSecretFormsApp
             depatureStationNrtbx3.Text = Convert.ToString(connectionResult.ConnectionList[2].From.Platform);
             arrivalStationNrtbx3.Text = Convert.ToString(connectionResult.ConnectionList[2].To.Platform);
 
+            if (depatureStationPanel.Entries[0].Category == "B")
+            {
+                depatureLinetbx3.Text = Convert.ToString(depatureStationPanel.Entries[0].Number);
+                arrivalLinetbx3.Text = Convert.ToString(depatureStationPanel.Entries[0].Number);
+            }
+            else
+            {
+                depatureLinetbx3.Text = Convert.ToString(depatureStationPanel.Entries[0].Name);
+                arrivalLineLabel3.Text = Convert.ToString(depatureStationPanel.Entries[0].Name);
+            }
+
             // Alles wird bei der vierten Verbindung in die Textfelder eingefügt
 
             depatureStation4.Text = Convert.ToString(connectionResult.ConnectionList[3].From.Station.Name);
@@ -135,6 +170,17 @@ namespace SBBTopSecretFormsApp
 
             depatureStationNrtbx4.Text = Convert.ToString(connectionResult.ConnectionList[3].From.Platform);
             arrivalStationNrtbx4.Text = Convert.ToString(connectionResult.ConnectionList[3].To.Platform);
+
+            if (depatureStationPanel.Entries[0].Category == "B")
+            {
+                depatureLinetbx4.Text = Convert.ToString(depatureStationPanel.Entries[0].Number);
+                arrivalLinetbx4.Text = Convert.ToString(depatureStationPanel.Entries[0].Number);
+            }
+            else
+            {
+                depatureLinetbx4.Text = Convert.ToString(depatureStationPanel.Entries[0].Name);
+                arrivalLinetbx4.Text = Convert.ToString(depatureStationPanel.Entries[0].Name);
+            }
         }
  
         // Event, wenn auf den Als Email versenden Knopf gedrückt wird

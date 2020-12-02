@@ -45,7 +45,7 @@ namespace SBBTopSecretFormsApp
 
                 try
                 {
-                    // Datum wird in das Richtige Vormat Jahr-Monat-Tag umgewandelt
+                    // Datum wird in das Richtige Format Jahr-Monat-Tag umgewandelt
                     DateTime dateSearchConnection = DateTime.Parse(dateSearch.Text);
                     string YearSearch = dateSearchConnection.Year.ToString();
                     string MonthSearch = dateSearchConnection.Month.ToString();
