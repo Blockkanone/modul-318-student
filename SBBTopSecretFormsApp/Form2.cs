@@ -155,7 +155,7 @@ namespace SBBTopSecretFormsApp
             else
             {
                 depatureLinetbx3.Text = Convert.ToString(depatureStationPanel.Entries[0].Name);
-                arrivalLineLabel3.Text = Convert.ToString(depatureStationPanel.Entries[0].Name);
+                arrivalLinetbx3.Text = Convert.ToString(depatureStationPanel.Entries[0].Name);
             }
 
             // Alles wird bei der vierten Verbindung in die Textfelder eingefügt

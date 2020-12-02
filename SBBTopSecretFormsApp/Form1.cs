@@ -33,60 +33,65 @@ namespace SBBTopSecretFormsApp
         // Event, wenn der Suchen Knopf gedrückt wird
         private void searchButton_Click(object sender, EventArgs e)
         {
-            // StationsBoard wird vorbereitet um als Parameter zu übergeben
-           var StationId = _transport.GetStations(query: depatureStation.Text);
-            var depatureStationPanel = _transport.GetStationBoard(station: depatureStation.Text, id: StationId.StationList[0].Id);
+            try
+            {
 
-            // Abfrage ob alles ausgefüllt wurde
-            if (depatureStation.Text != "" && arrivalStation.Text != "") { 
-                // Textfelder werden ausgelesen
-            var depatureTextResult = _transport.GetStations(query: depatureStation.Text);
-            var arrivalTextResult = _transport.GetStations(query: arrivalStation.Text);
+                // StationsBoard wird vorbereitet um als Parameter zu übergeben
+                var StationId = _transport.GetStations(query: depatureStation.Text);
+                var depatureStationPanel = _transport.GetStationBoard(station: depatureStation.Text, id: StationId.StationList[0].Id);
 
-                try
+
+                // Abfrage ob alles ausgefüllt wurde
+                if (depatureStation.Text != "" && arrivalStation.Text != "")
                 {
-                    // Datum wird in das Richtige Format Jahr-Monat-Tag umgewandelt
-                    DateTime dateSearchConnection = DateTime.Parse(dateSearch.Text);
-                    string YearSearch = dateSearchConnection.Year.ToString();
-                    string MonthSearch = dateSearchConnection.Month.ToString();
-                    string DaySearch = dateSearchConnection.Day.ToString();
+                    // Textfelder werden ausgelesen
+                    var depatureTextResult = _transport.GetStations(query: depatureStation.Text);
+                    var arrivalTextResult = _transport.GetStations(query: arrivalStation.Text);
 
-                    if (MonthSearch == "1" || MonthSearch == "2" || MonthSearch == "3" || MonthSearch == "4" || MonthSearch == "5" || MonthSearch == "6" || MonthSearch == "7" || MonthSearch == "8" || MonthSearch == "9" )
-                    {
-                        MonthSearch = "0" + MonthSearch;
-                    }
-
-                    if (DaySearch == "1" || DaySearch == "2" || DaySearch == "3" || DaySearch == "4" || DaySearch == "5" || DaySearch == "6" || DaySearch == "7" || DaySearch == "8" || DaySearch == "9")
-                    {
-                        DaySearch = "0" + DaySearch;
-                    }
-
-                    string DateTimeSearchConnection = YearSearch + "-" + MonthSearch + "-" + DaySearch;
-                    // Abfrage für die Verbindung wird erstellt
-                    var connectionResult = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: arrivalStation.Text, date: DateTimeSearchConnection, time: timeSearch.Text);
-
-                    
                     try
                     {
-                        // Suchverlauf wird gespeichert
-                        depatureHistory[counter] = connectionResult.ConnectionList[0].From.Station.Name;
-                        arrivalHistory[counter] = connectionResult.ConnectionList[0].To.Station.Name;
-                        counter--;
-                    }
-                    // Bei fehler beginnt der Suchverlauf von neuem
-                    catch(IndexOutOfRangeException)
-                    {
-                       depatureHistory = new string[] { connectionResult.ConnectionList[0].From.Station.Name};
-                       arrivalHistory = new string[] { connectionResult.ConnectionList[0].To.Station.Name};
-                    }
+                        // Datum wird in das Richtige Format Jahr-Monat-Tag umgewandelt
+                        DateTime dateSearchConnection = DateTime.Parse(dateSearch.Text);
+                        string YearSearch = dateSearchConnection.Year.ToString();
+                        string MonthSearch = dateSearchConnection.Month.ToString();
+                        string DaySearch = dateSearchConnection.Day.ToString();
 
-                    // Suchverlauf wird der vorgeschlagenen Liste eingefügt
-                    int condit = 0;
+                        if (MonthSearch == "1" || MonthSearch == "2" || MonthSearch == "3" || MonthSearch == "4" || MonthSearch == "5" || MonthSearch == "6" || MonthSearch == "7" || MonthSearch == "8" || MonthSearch == "9")
+                        {
+                            MonthSearch = "0" + MonthSearch;
+                        }
 
-                    depatureStation.Items.Clear();
-                    arrivalStation.Items.Clear();
+                        if (DaySearch == "1" || DaySearch == "2" || DaySearch == "3" || DaySearch == "4" || DaySearch == "5" || DaySearch == "6" || DaySearch == "7" || DaySearch == "8" || DaySearch == "9")
+                        {
+                            DaySearch = "0" + DaySearch;
+                        }
 
-                    while (condit < depatureHistory.Length)
+                        string DateTimeSearchConnection = YearSearch + "-" + MonthSearch + "-" + DaySearch;
+                        // Abfrage für die Verbindung wird erstellt
+                        var connectionResult = _transport.GetConnections(fromStation: depatureStation.Text, toStattion: arrivalStation.Text, date: DateTimeSearchConnection, time: timeSearch.Text);
+
+
+                        try
+                        {
+                            // Suchverlauf wird gespeichert
+                            depatureHistory[counter] = connectionResult.ConnectionList[0].From.Station.Name;
+                            arrivalHistory[counter] = connectionResult.ConnectionList[0].To.Station.Name;
+                            counter--;
+                        }
+                        // Bei fehler beginnt der Suchverlauf von neuem
+                        catch (IndexOutOfRangeException)
+                        {
+                            depatureHistory = new string[] { connectionResult.ConnectionList[0].From.Station.Name };
+                            arrivalHistory = new string[] { connectionResult.ConnectionList[0].To.Station.Name };
+                        }
+
+                        // Suchverlauf wird der vorgeschlagenen Liste eingefügt
+                        int condit = 0;
+
+                        depatureStation.Items.Clear();
+                        arrivalStation.Items.Clear();
+
+                        while (condit < depatureHistory.Length)
                         {
                             try
                             {
@@ -96,9 +101,9 @@ namespace SBBTopSecretFormsApp
                             condit++;
                         }
 
-                    condit = 0;
+                        condit = 0;
 
-                    while (condit < arrivalHistory.Length)
+                        while (condit < arrivalHistory.Length)
                         {
                             try
                             {
@@ -108,31 +113,39 @@ namespace SBBTopSecretFormsApp
                             condit++;
                         }
 
-                    // Form2 wird erstellt. Parameter connectionResult und depatureStationPanel wird übertragen
-                    Form form2 = new Form2(connectionResult, depatureStationPanel);
-                    // Form2 wird angezeigt und fokussiert
-                    form2.Show();
-                form2.Focus();
+                        // Form2 wird erstellt. Parameter connectionResult und depatureStationPanel wird übertragen
+                        Form form2 = new Form2(connectionResult, depatureStationPanel);
+                        // Form2 wird angezeigt und fokussiert
+                        form2.Show();
+                        form2.Focus();
+
+                    }
+                    // Sollte keine Station gefunden werden
+                    catch (ArgumentOutOfRangeException)
+                    {
+                        MessageBox.Show("Es wurde keine Station gefunden");
+                    }
+                }
+                // Sollte eingabe nicht vollständig sein, wird darauf hingewiesen
+                else
+                {
+                    MessageBox.Show("Es müssen zwei Stationen eingegeben werden, um eine Verbindung herzustellen");
+                }
             }
-                // Sollte keine Station gefunden werden
-            catch(ArgumentOutOfRangeException) 
-            { 
+            catch (ArgumentOutOfRangeException)
+            {
                 MessageBox.Show("Es wurde keine Station gefunden");
             }
-            }
-            // Sollte eingabe nicht vollständig sein, wird darauf hingewiesen
-            else
-            {
-                MessageBox.Show("Es müssen zwei Stationen eingegeben werden, um eine Verbindung herzustellen");
-            }
-            
+
         }
         
         // Event, wenn auf den Abfahrtstafel Knopf gedrückt wird
         private void departurePanelButton_Click(object sender, EventArgs e)
         {
-              // überprüfung, ob etwas ausgefüllt wurde
-            if (depatureStation.Text != "")
+            try
+            {
+                // überprüfung, ob etwas ausgefüllt wurde
+                if (depatureStation.Text != "")
             {
             // GetStationBoard wird erstellt         
                 var StationId = _transport.GetStations(query: depatureStation.Text);
@@ -175,6 +188,11 @@ namespace SBBTopSecretFormsApp
             else {
                 MessageBox.Show("Um auf die Abfahrtstafel zuzugreifen, muss bei 'Von' eine Station eingegeben werden");
                     }
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("Es wurde keine Station gefunden");
+            }
 
         }
 
@@ -207,7 +225,8 @@ namespace SBBTopSecretFormsApp
                 condition++;
 
             }
-        }
+           
+            }
 
         // Event, sollte beim Bis Textfeld der Text sich ändert
         private void arrivalStation_TextUpdate(object sender, EventArgs e)

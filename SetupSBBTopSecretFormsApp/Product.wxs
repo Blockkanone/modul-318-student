@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"><?define SBBTopSecretFormsApp_TargetDir=$(var.SBBTopSecretFormsApp.TargetDir)?><?define SwissTransport_TargetDir=$(var.SwissTransport.TargetDir)?>
+	<Product Id="*" Name="SBBTopSecretFormsApp" Language="1033" Version="1.0.0.0" Manufacturer="Blockkanone" UpgradeCode="7e705f90-3d8d-4db0-974c-2df20ba1089e">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+
+		<Feature Id="ProductFeature" Title="SBBTopSecretFormsApp" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+      <ComponentRef Id="ApplicationShortcut" />
+      <ComponentRef Id="ApplicationShortcutDesktop" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="SBBTopSecretFormsApp" />
+			</Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="SBBTopSecretFormsApp" />
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop" />
+    </Directory>
+	</Fragment>
+
+  <Fragment>
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid ="9bd13330-6540-406f-a3a8-d7f7c69ae7f9">
+        <Shortcut Id="ApplicationStartMenuShortcut" Name="SBBTopSecretFormsApp" Description="SBBTopSecretFormsApp" Target="[INSTALLFOLDER]SBBTopSecretFormsApp"/>
+          <RemoveFolder Id="RemoveApplicationProgramsFolder" Directory="ApplicationProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\SBBTopSecretFormsApp" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="DesktopFolder">
+      <Component Id="ApplicationShortcutDesktop" Guid ="cde1e030-eb64-49a5-b7b8-400b379c2d1a">
+        <Shortcut Id="ApplicationDesktopShortcut" Name="SBBTopSecretFormsApp" Description="SBBTopSecretFormsApp" Target="[INSTALLFOLDER]SBBTopSecretFormsApp"/>
+        <RemoveFolder Id="RemoveDesktopFolder" Directory="DesktopFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\SBBTopSecretFormsApp" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+			<!-- <Component Id="ProductComponent"> -->
+				<!-- TODO: Insert files, registry keys, and other resources here. -->
+			<!-- </Component> -->
+			<Component Id="SBBTopSecretFormsApp.exe" Guid="613c9026-6f5c-4a9d-8eaa-2ff32d02858b">
+			  <File Id="SBBTopSecretFormsApp.exe" Name="SBBTopSecretFormsApp.exe" Source="$(var.SBBTopSecretFormsApp_TargetDir)SBBTopSecretFormsApp.exe" />
+			</Component>
+			<Component Id="SBBTopSecretFormsApp.exe.config" Guid="990b10b5-4a84-4a05-a070-8441330cdced">
+			  <File Id="SBBTopSecretFormsApp.exe.config" Name="SBBTopSecretFormsApp.exe.config" Source="$(var.SBBTopSecretFormsApp_TargetDir)SBBTopSecretFormsApp.exe.config" />
+			</Component>
+			<Component Id="SwissTransport.dll" Guid="d9f8f8a3-701b-40f9-913c-2650110a4634">
+			  <File Id="SwissTransport.dll" Name="SwissTransport.dll" Source="$(var.SwissTransport_TargetDir)SwissTransport.dll" />
+			</Component>
+			<Component Id="GMap.NET.WindowsForms.dll" Guid="7f48a10f-1790-4641-ade7-3d6d6479e5f6">
+			  <File Id="GMap.NET.WindowsForms.dll" Name="GMap.NET.WindowsForms.dll" Source="$(var.SBBTopSecretFormsApp_TargetDir)GMap.NET.WindowsForms.dll" />
+			</Component>
+			<Component Id="GMap.NET.Core.dll" Guid="5ea91f4a-dbc4-4338-ae08-d2af0ad86b1f">
+			  <File Id="GMap.NET.Core.dll" Name="GMap.NET.Core.dll" Source="$(var.SBBTopSecretFormsApp_TargetDir)GMap.NET.Core.dll" />
+			</Component>
+			<Component Id="Newtonsoft.Json.dll" Guid="7fde1c15-dc3e-46ca-bb78-aa2080dcbe9e">
+			  <File Id="Newtonsoft.Json.dll" Name="Newtonsoft.Json.dll" Source="$(var.SBBTopSecretFormsApp_TargetDir)Newtonsoft.Json.dll" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>
